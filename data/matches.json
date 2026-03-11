@@ -1,0 +1,1610 @@
+{
+    "single_elimination": {
+        "stage": [
+          {
+            "id": 1,
+            "tournament_id": 1,
+            "name": "Single Elimination",
+            "type": "single_elimination",
+            "number": 1,
+            "settings": {
+              "size": 16,
+              "seedOrdering": ["natural"],
+              "consolationFinal": false
+            }
+          }
+        ],
+        "group": [
+          {
+            "id": 1,
+            "stage_id": 1,
+            "number": 1
+          }
+        ],
+        "round": [
+          { "id": 1, "stage_id": 1, "group_id": 1, "number": 1 },
+          { "id": 2, "stage_id": 1, "group_id": 1, "number": 2 },
+          { "id": 3, "stage_id": 1, "group_id": 1, "number": 3 },
+          { "id": 4, "stage_id": 1, "group_id": 1, "number": 4 }
+        ],
+        "match": [
+          {
+            "_comment": "--- Round 1 / Preliminary (round_id: 1) - 8 matches ---"
+          },
+          {
+            "id": 1,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 1,
+            "child_count": 0,
+            "status": 1,
+            "opponent1": {
+              "id": 1,
+              "score": null,
+              "result": null,
+              "forfeit": false
+            },
+            "opponent2": {
+              "id": null,
+              "score": null,
+              "result": null,
+              "forfeit": true,
+              "position": 2
+            },
+            "_note": "WALK_OVER: Samuel Harris gets bye. TBD = forfeit:true"
+          },
+          {
+            "id": 2,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 2,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 2,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 3,
+              "score": null,
+              "result": null
+            },
+            "_note": "Daniel Brown vs James Anderson"
+          },
+          {
+            "id": 3,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 3,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 4,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 5,
+              "score": null,
+              "result": null
+            },
+            "_note": "Lenord DiCaprio vs Thompson Oliver"
+          },
+          {
+            "id": 4,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 4,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 6,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 7,
+              "score": null,
+              "result": null
+            },
+            "_note": "Alice Seven vs Robert Downney"
+          },
+          {
+            "id": 5,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 5,
+            "child_count": 0,
+            "status": 1,
+            "opponent1": {
+              "id": 8,
+              "score": null,
+              "result": null,
+              "forfeit": false
+            },
+            "opponent2": {
+              "id": null,
+              "score": null,
+              "result": null,
+              "forfeit": true,
+              "position": 2
+            },
+            "_note": "WALK_OVER: Henry Zoi gets bye. TBD = forfeit:true"
+          },
+          {
+            "id": 6,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 6,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 9,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 10,
+              "score": null,
+              "result": null
+            },
+            "_note": "Tom Cruise vs Freeman Deep"
+          },
+          {
+            "id": 7,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 7,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 11,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 12,
+              "score": null,
+              "result": null
+            },
+            "_note": "Morgan Johnny vs Chris Hemsworth"
+          },
+          {
+            "id": 8,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 8,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 13,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 14,
+              "score": null,
+              "result": null
+            },
+            "_note": "John Doe vs Collins Benjamin"
+          },
+          {
+            "_comment": "--- Round 2 / Quarter-Finals (round_id: 2) - 4 matches ---"
+          },
+          {
+            "id": 9,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": 1,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Samuel Harris (walkover winner) vs Winner of M2"
+          },
+          {
+            "id": 10,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of M3 vs Winner of M4"
+          },
+          {
+            "id": 11,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 3,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": 8,
+              "position": 5
+            },
+            "opponent2": {
+              "id": null,
+              "position": 6
+            },
+            "_note": "Henry Zoi (walkover winner) vs Winner of M6"
+          },
+          {
+            "id": 12,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 4,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 7
+            },
+            "opponent2": {
+              "id": null,
+              "position": 8
+            },
+            "_note": "Winner of M7 vs Winner of M8"
+          },
+          {
+            "_comment": "--- Round 3 / Semi-Finals (round_id: 3) - 2 matches ---"
+          },
+          {
+            "id": 13,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 3,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of QF1 vs Winner of QF2"
+          },
+          {
+            "id": 14,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 3,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of QF3 vs Winner of QF4"
+          },
+          {
+            "_comment": "--- Round 4 / Final (round_id: 4) - 1 match ---"
+          },
+          {
+            "id": 15,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 4,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of SF1 vs Winner of SF2 — raceToFrames: 3 (best-of final)"
+          }
+        ],
+        "participant": [
+          { "id": 1,  "tournament_id": 1, "name": "Samuel Harris" },
+          { "id": 2,  "tournament_id": 1, "name": "Daniel Brown" },
+          { "id": 3,  "tournament_id": 1, "name": "James Anderson" },
+          { "id": 4,  "tournament_id": 1, "name": "Lenord DiCaprio" },
+          { "id": 5,  "tournament_id": 1, "name": "Thompson Oliver" },
+          { "id": 6,  "tournament_id": 1, "name": "Alice Seven" },
+          { "id": 7,  "tournament_id": 1, "name": "Robert Downney" },
+          { "id": 8,  "tournament_id": 1, "name": "Henry Zoi" },
+          { "id": 9,  "tournament_id": 1, "name": "Tom Cruise" },
+          { "id": 10, "tournament_id": 1, "name": "Freeman Deep" },
+          { "id": 11, "tournament_id": 1, "name": "Morgan Johnny" },
+          { "id": 12, "tournament_id": 1, "name": "Chris Hemsworth" },
+          { "id": 13, "tournament_id": 1, "name": "John Doe" },
+          { "id": 14, "tournament_id": 1, "name": "Collins Benjamin" }
+        ]
+      },
+
+    "double_elimination": {
+        "stage": [
+          {
+            "id": 1,
+            "tournament_id": 1,
+            "name": "Double Elimination",
+            "type": "double_elimination",
+            "number": 1,
+            "settings": {
+              "size": 16,
+              "seedOrdering": ["natural"],
+              "grandFinal": "simple"
+            }
+          }
+        ],
+        "group": [
+          {
+            "id": 1,
+            "stage_id": 1,
+            "number": 1
+          },
+          {
+            "id": 2,
+            "stage_id": 1,
+            "number": 2
+          },
+          {
+            "id": 3,
+            "stage_id": 1,
+            "number": 3
+          }
+        ],
+        "round": [
+          { "id": 1,  "stage_id": 1, "group_id": 1, "number": 1 },
+          { "id": 2,  "stage_id": 1, "group_id": 1, "number": 2 },
+          { "id": 3,  "stage_id": 1, "group_id": 1, "number": 3 },
+          { "id": 4,  "stage_id": 1, "group_id": 1, "number": 4 },
+          { "id": 5,  "stage_id": 1, "group_id": 2, "number": 1 },
+          { "id": 6,  "stage_id": 1, "group_id": 2, "number": 2 },
+          { "id": 7,  "stage_id": 1, "group_id": 2, "number": 3 },
+          { "id": 8,  "stage_id": 1, "group_id": 2, "number": 4 },
+          { "id": 9,  "stage_id": 1, "group_id": 2, "number": 5 },
+          { "id": 10, "stage_id": 1, "group_id": 2, "number": 6 },
+          { "id": 11, "stage_id": 1, "group_id": 3, "number": 1 }
+        ],
+        "match": [
+          {
+            "_comment": "=== WINNERS BRACKET (group_id: 1) ===",
+            "_comment2": "--- WB Round 1 (round_id: 1) - 8 matches ---"
+          },
+          {
+            "id": 1,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 1,
+            "child_count": 0,
+            "status": 1,
+            "opponent1": {
+              "id": 1,
+              "score": null,
+              "result": null,
+              "forfeit": false
+            },
+            "opponent2": {
+              "id": null,
+              "score": null,
+              "result": null,
+              "forfeit": true,
+              "position": 2
+            },
+            "_note": "WALK_OVER: Samuel Harris gets bye. opponent2 is TBD/NO_PARTY → forfeit:true, id:null"
+          },
+          {
+            "id": 2,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 2,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 2,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 3,
+              "score": null,
+              "result": null
+            },
+            "_note": "Daniel Brown vs James Anderson"
+          },
+          {
+            "id": 3,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 3,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 4,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 5,
+              "score": null,
+              "result": null
+            },
+            "_note": "Thompson Oliver vs Chris Hemsworth"
+          },
+          {
+            "id": 4,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 4,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 6,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 7,
+              "score": null,
+              "result": null
+            },
+            "_note": "Alice Seven vs Robert Downney"
+          },
+          {
+            "id": 5,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 5,
+            "child_count": 0,
+            "status": 1,
+            "opponent1": {
+              "id": 8,
+              "score": null,
+              "result": null,
+              "forfeit": false
+            },
+            "opponent2": {
+              "id": null,
+              "score": null,
+              "result": null,
+              "forfeit": true,
+              "position": 2
+            },
+            "_note": "WALK_OVER: Henry Zoi gets bye. opponent2 is TBD/NO_PARTY → forfeit:true, id:null"
+          },
+          {
+            "id": 6,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 6,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 9,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 10,
+              "score": null,
+              "result": null
+            },
+            "_note": "Tom Cruise vs Freeman Deep"
+          },
+          {
+            "id": 7,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 7,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 11,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 12,
+              "score": null,
+              "result": null
+            },
+            "_note": "Morgan Johnny vs Lenord DiCaprio"
+          },
+          {
+            "id": 8,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 8,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+              "id": 13,
+              "score": null,
+              "result": null
+            },
+            "opponent2": {
+              "id": 14,
+              "score": null,
+              "result": null
+            },
+            "_note": "Collins Benjamin vs John Doe"
+          },
+          {
+            "_comment": "--- WB Round 2 (round_id: 2) - 4 matches ---"
+          },
+          {
+            "id": 9,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of M1 vs Winner of M2"
+          },
+          {
+            "id": 10,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of M3 vs Winner of M4"
+          },
+          {
+            "id": 11,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 3,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 5
+            },
+            "opponent2": {
+              "id": null,
+              "position": 6
+            },
+            "_note": "Winner of M5 vs Winner of M6"
+          },
+          {
+            "id": 12,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 4,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 7
+            },
+            "opponent2": {
+              "id": null,
+              "position": 8
+            },
+            "_note": "Winner of M7 vs Winner of M8"
+          },
+          {
+            "_comment": "--- WB Round 3 / Semi-Finals (round_id: 3) - 2 matches ---"
+          },
+          {
+            "id": 13,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 3,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of M9 vs Winner of M10"
+          },
+          {
+            "id": 14,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 3,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of M11 vs Winner of M12"
+          },
+          {
+            "_comment": "--- WB Final (round_id: 4) - 1 match ---"
+          },
+          {
+            "id": 15,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 4,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of M13 vs Winner of M14 — raceToFrames: 3 (as per your data)"
+          },
+          {
+            "_comment": "=== LOSERS BRACKET (group_id: 2) ==="
+          },
+          {
+            "_comment": "--- LB Round 1 (round_id: 5) - 4 matches (WB R1 losers) ---"
+          },
+          {
+            "id": 16,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 5,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Loser of M1 vs Loser of M2 (your: 76facc3a)"
+          },
+          {
+            "id": 17,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 5,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Loser of M3 vs Loser of M4 (your: e2b7de43)"
+          },
+          {
+            "id": 18,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 5,
+            "number": 3,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 5
+            },
+            "opponent2": {
+              "id": null,
+              "position": 6
+            },
+            "_note": "Loser of M5 vs Loser of M6 (your: 3b65acc6)"
+          },
+          {
+            "id": 19,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 5,
+            "number": 4,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 7
+            },
+            "opponent2": {
+              "id": null,
+              "position": 8
+            },
+            "_note": "Loser of M7 vs Loser of M8 (your: 90c55e2d)"
+          },
+          {
+            "_comment": "--- LB Round 2 (round_id: 6) - 4 matches (LB R1 winners vs WB R2 losers) ---"
+          },
+          {
+            "id": 20,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 6,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of LB-M1 vs Loser of WB-M9 (your: 183c4051)"
+          },
+          {
+            "id": 21,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 6,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of LB-M2 vs Loser of WB-M10 (your: 6fdee7f5)"
+          },
+          {
+            "id": 22,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 6,
+            "number": 3,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 5
+            },
+            "opponent2": {
+              "id": null,
+              "position": 6
+            },
+            "_note": "Winner of LB-M3 vs Loser of WB-M11 (your: 2baf93e7)"
+          },
+          {
+            "id": 23,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 6,
+            "number": 4,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 7
+            },
+            "opponent2": {
+              "id": null,
+              "position": 8
+            },
+            "_note": "Winner of LB-M4 vs Loser of WB-M12 (your: 7b4b6319)"
+          },
+          {
+            "_comment": "--- LB Round 3 (round_id: 7) - 2 matches ---"
+          },
+          {
+            "id": 24,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 7,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of LB-M5 vs Winner of LB-M6 (your: 04a217d6)"
+          },
+          {
+            "id": 25,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 7,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of LB-M7 vs Winner of LB-M8 (your: f62428b7)"
+          },
+          {
+            "_comment": "--- LB Round 4 (round_id: 8) - 2 matches (LB R3 winners vs WB R3 losers) ---"
+          },
+          {
+            "id": 26,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 8,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of LB-M9 vs Loser of WB-M13 (your: 73775432)"
+          },
+          {
+            "id": 27,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 8,
+            "number": 2,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 3
+            },
+            "opponent2": {
+              "id": null,
+              "position": 4
+            },
+            "_note": "Winner of LB-M10 vs Winner of LB-M11 (your: 556decfe)"
+          },
+          {
+            "_comment": "--- LB Round 5 (round_id: 9) - 1 match (LB Semi-Final) ---"
+          },
+          {
+            "id": 28,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 9,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of LB-M12 vs Winner of LB-M13 (your: f2a1c1ba)"
+          },
+          {
+            "_comment": "--- LB Round 6 (round_id: 10) - 1 match (LB Final vs WB Final loser) ---"
+          },
+          {
+            "id": 29,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 10,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of LB-M14 vs Loser of WB Final (your: 03406c7a)"
+          },
+          {
+            "_comment": "--- LB Round 7 (round_id: 11) - Grand Final qualifier from LB ---"
+          },
+          {
+            "id": 30,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 11,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "Winner of LB-M15 vs Loser of WB-M15 (your: e1840c7c)"
+          },
+          {
+            "_comment": "=== GRAND FINAL (group_id: 3) ==="
+          },
+          {
+            "id": 31,
+            "stage_id": 1,
+            "group_id": 3,
+            "round_id": 11,
+            "number": 1,
+            "child_count": 0,
+            "status": 0,
+            "opponent1": {
+              "id": null,
+              "position": 1
+            },
+            "opponent2": {
+              "id": null,
+              "position": 2
+            },
+            "_note": "WB Champion vs LB Champion — Grand Final"
+          }
+        ],
+        "participant": [
+          { "id": 1,  "tournament_id": 1, "name": "Samuel Harris" },
+          { "id": 2,  "tournament_id": 1, "name": "Daniel Brown" },
+          { "id": 3,  "tournament_id": 1, "name": "James Anderson" },
+          { "id": 4,  "tournament_id": 1, "name": "Thompson Oliver" },
+          { "id": 5,  "tournament_id": 1, "name": "Chris Hemsworth" },
+          { "id": 6,  "tournament_id": 1, "name": "Alice Seven" },
+          { "id": 7,  "tournament_id": 1, "name": "Robert Downney" },
+          { "id": 8,  "tournament_id": 1, "name": "Henry Zoi" },
+          { "id": 9,  "tournament_id": 1, "name": "Tom Cruise" },
+          { "id": 10, "tournament_id": 1, "name": "Freeman Deep" },
+          { "id": 11, "tournament_id": 1, "name": "Morgan Johnny" },
+          { "id": 12, "tournament_id": 1, "name": "Lenord DiCaprio" },
+          { "id": 13, "tournament_id": 1, "name": "Collins Benjamin" },
+          { "id": 14, "tournament_id": 1, "name": "John Doe" }
+        ]
+      },
+    
+   
+
+    "round_robin": {
+  "_notes": [
+    "brackets-model only supports StageType: 'round_robin' | 'single_elimination' | 'double_elimination'.",
+    "Round Robin maps directly to type 'round_robin' with groupCount: 1 (single group).",
+    "14 players in 1 group = 91 total matches ((14*13)/2) across 13 rounds (7 matches each).",
+    "Your backend is returning paginated match data (page 1 of 10, 10 per page, totalCount: 91).",
+    "IMPORTANT: Your backend roundId '04bd9b18' is shared by two matches where a player (Samuel Harris) appears in BOTH — this is invalid for a single round. Your backend has a round assignment bug: these two matches belong to different rounds but received the same roundId UUID.",
+    "The round_id integers here are assigned per unique roundId UUID from your data for page 1 only. Remaining rounds (9-13) are TBD from pages 2-10."
+  ],
+  "stage": [
+    {
+      "id": 1,
+      "tournament_id": 1,
+      "name": "Round Robin 1 - Test - 14 Players",
+      "type": "round_robin",
+      "number": 1,
+      "settings": {
+        "size": 14,
+        "groupCount": 1,
+        "roundRobinMode": "simple",
+        "seedOrdering": ["groups.natural"]
+      }
+    }
+  ],
+  "group": [
+    {
+      "id": 1,
+      "stage_id": 1,
+      "number": 1,
+      "_note": "All 14 players in a single group"
+    }
+  ],
+  "round": [
+    { "id": 1,  "stage_id": 1, "group_id": 1, "number": 1,  "_source_roundId": "eed2f1dd" },
+    { "id": 2,  "stage_id": 1, "group_id": 1, "number": 2,  "_source_roundId": "bc295029" },
+    { "id": 3,  "stage_id": 1, "group_id": 1, "number": 3,  "_source_roundId": "d90cab63" },
+    { "id": 4,  "stage_id": 1, "group_id": 1, "number": 4,  "_source_roundId": "04bd9b18 (match 431a4c87 - Robert Downney vs Daniel Brown)" },
+    { "id": 5,  "stage_id": 1, "group_id": 1, "number": 5,  "_source_roundId": "04bd9b18 (match ddb24609 - Samuel Harris vs Freeman Deep) — SAME UUID, different logical round — BACKEND BUG" },
+    { "id": 6,  "stage_id": 1, "group_id": 1, "number": 6,  "_source_roundId": "5a957153" },
+    { "id": 7,  "stage_id": 1, "group_id": 1, "number": 7,  "_source_roundId": "c251fb9b" },
+    { "id": 8,  "stage_id": 1, "group_id": 1, "number": 8,  "_source_roundId": "76ebe253" },
+    { "id": 9,  "stage_id": 1, "group_id": 1, "number": 9,  "_source_roundId": "696b2718" },
+    { "id": 10, "stage_id": 1, "group_id": 1, "number": 10, "_source_roundId": "TBD from page 2" },
+    { "id": 11, "stage_id": 1, "group_id": 1, "number": 11, "_source_roundId": "TBD from page 2" },
+    { "id": 12, "stage_id": 1, "group_id": 1, "number": 12, "_source_roundId": "TBD from page 2" },
+    { "id": 13, "stage_id": 1, "group_id": 1, "number": 13, "_source_roundId": "TBD from page 2" }
+  ],
+  "match": [
+    { "_comment": "--- Round 1 (round_id: 1, source: eed2f1dd) ---" },
+    {
+      "id": 1,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 1, "score": 0, "result": null },
+      "opponent2": { "id": 2, "score": 0, "result": null },
+      "_note": "Lenord DiCaprio vs Daniel Brown (source: 837177ff)"
+    },
+    { "_comment": "--- Round 2 (round_id: 2, source: bc295029) ---" },
+    {
+      "id": 2,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 2,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 3, "score": 0, "result": null },
+      "opponent2": { "id": 4, "score": 0, "result": null },
+      "_note": "Thompson Oliver vs Tom Cruise (source: 19c28022)"
+    },
+    { "_comment": "--- Round 3 (round_id: 3, source: d90cab63) ---" },
+    {
+      "id": 3,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 3,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 5, "score": 0, "result": null },
+      "opponent2": { "id": 6, "score": 0, "result": null },
+      "_note": "Samuel Harris vs Henry Zoi (source: 712a06e5)"
+    },
+    { "_comment": "--- Round 4 (round_id: 4, source: 04bd9b18 — first match) ---" },
+    {
+      "id": 4,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 4,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 7, "score": 0, "result": null },
+      "opponent2": { "id": 2, "score": 0, "result": null },
+      "_note": "Robert Downney vs Daniel Brown (source: 431a4c87)"
+    },
+    { "_comment": "--- Round 5 (round_id: 5, source: 04bd9b18 — second match, BACKEND BUG: same roundId as round 4 but player conflict) ---" },
+    {
+      "id": 5,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 5,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 5, "score": 0, "result": null },
+      "opponent2": { "id": 8, "score": 0, "result": null },
+      "_note": "Samuel Harris vs Freeman Deep (source: ddb24609)"
+    },
+    { "_comment": "--- Round 6 (round_id: 6, source: 5a957153) ---" },
+    {
+      "id": 6,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 6,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 5, "score": 0, "result": null },
+      "opponent2": { "id": 9, "score": 0, "result": null },
+      "_note": "Samuel Harris vs James Anderson (source: 22042720)"
+    },
+    { "_comment": "--- Round 7 (round_id: 7, source: c251fb9b) — 2 matches ---" },
+    {
+      "id": 7,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 7,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 10, "score": 0, "result": null },
+      "opponent2": { "id": 7,  "score": 0, "result": null },
+      "_note": "John Doe vs Robert Downney (source: 3635e4af)"
+    },
+    {
+      "id": 8,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 7,
+      "number": 2,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 2, "score": 0, "result": null },
+      "opponent2": { "id": 6, "score": 0, "result": null },
+      "_note": "Daniel Brown vs Henry Zoi (source: b6da87e5)"
+    },
+    { "_comment": "--- Round 8 (round_id: 8, source: 76ebe253) ---" },
+    {
+      "id": 9,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 8,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 9,  "score": 0, "result": null },
+      "opponent2": { "id": 11, "score": 0, "result": null },
+      "_note": "James Anderson vs Morgan Johnny (source: fddd06a8)"
+    },
+    { "_comment": "--- Round 9 (round_id: 9, source: 696b2718) ---" },
+    {
+      "id": 10,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 9,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 12, "score": 0, "result": null },
+      "opponent2": { "id": 1,  "score": 0, "result": null },
+      "_note": "Alice Seven vs Lenord DiCaprio (source: c899c6c5)"
+    }
+  ],
+  "participant": [
+    { "id": 1,  "tournament_id": 1, "name": "Lenord DiCaprio" },
+    { "id": 2,  "tournament_id": 1, "name": "Daniel Brown" },
+    { "id": 3,  "tournament_id": 1, "name": "Thompson Oliver" },
+    { "id": 4,  "tournament_id": 1, "name": "Tom Cruise" },
+    { "id": 5,  "tournament_id": 1, "name": "Samuel Harris" },
+    { "id": 6,  "tournament_id": 1, "name": "Henry Zoi" },
+    { "id": 7,  "tournament_id": 1, "name": "Robert Downney" },
+    { "id": 8,  "tournament_id": 1, "name": "Freeman Deep" },
+    { "id": 9,  "tournament_id": 1, "name": "James Anderson" },
+    { "id": 10, "tournament_id": 1, "name": "John Doe" },
+    { "id": 11, "tournament_id": 1, "name": "Morgan Johnny" },
+    { "id": 12, "tournament_id": 1, "name": "Alice Seven" },
+    { "id": 13, "tournament_id": 1, "name": "Chris Hemsworth" },
+    { "id": 14, "tournament_id": 1, "name": "Collins Benjamin" }
+  ]
+},
+
+    "Pool_play": {
+        "_notes": [
+          "brackets-model does NOT have a native 'Pool Play' StageType.",
+          "Pool Play maps to type 'round_robin' with groupCount set to the number of pools.",
+          "Your data shows 3 distinct pools (bracketIds: a7159a7d, 23c9b2a6, 554d723d) → groupCount: 3.",
+          "Pool 1 (a7159a7d): Alice Seven, Daniel Brown, Henry Zoi, John Doe, Lenord DiCaprio — 5 players, 10 matches total",
+          "Pool 2 (23c9b2a6): Chris Hemsworth, Collins Benjamin, Samuel Harris, Tom Cruise — 4 players, 6 matches total",
+          "Pool 3 (554d723d): James Anderson, Morgan Johnny, Thompson Oliver — 3 players, 3 matches total",
+          "Total matches: 10+6+3 = 19, but your paginationInfo shows totalCount: 26 — your data may have more pools or more players not shown on page 1.",
+          "Groups are numbered 1, 2, 3 corresponding to Pool 1, Pool 2, Pool 3.",
+          "Each pool has its own set of rounds — round IDs are group-scoped."
+        ],
+        "stage": [
+          {
+            "id": 1,
+            "tournament_id": 1,
+            "name": "Pool Play 1 - Test - 14 Players",
+            "type": "round_robin",
+            "number": 1,
+            "settings": {
+              "size": 14,
+              "groupCount": 3,
+              "roundRobinMode": "simple",
+              "seedOrdering": ["groups.natural"]
+            }
+          }
+        ],
+        "group": [
+          {
+            "id": 1,
+            "stage_id": 1,
+            "number": 1,
+            "_note": "Pool 1 — bracketId: a7159a7d — Players: Alice Seven, Daniel Brown, Henry Zoi, John Doe, Lenord DiCaprio"
+          },
+          {
+            "id": 2,
+            "stage_id": 1,
+            "number": 2,
+            "_note": "Pool 2 — bracketId: 23c9b2a6 — Players: Chris Hemsworth, Collins Benjamin, Samuel Harris, Tom Cruise"
+          },
+          {
+            "id": 3,
+            "stage_id": 1,
+            "number": 3,
+            "_note": "Pool 3 — bracketId: 554d723d — Players: James Anderson, Morgan Johnny, Thompson Oliver"
+          }
+        ],
+        "round": [
+          { "_comment": "--- Pool 1 rounds (group_id: 1) ---" },
+          { "id": 1, "stage_id": 1, "group_id": 1, "number": 1, "_source_roundId": "0a78474c" },
+          { "id": 2, "stage_id": 1, "group_id": 1, "number": 2, "_source_roundId": "2e08d671" },
+          { "id": 3, "stage_id": 1, "group_id": 1, "number": 3, "_source_roundId": "TBD (remaining Pool 1 rounds)" },
+          { "id": 4, "stage_id": 1, "group_id": 1, "number": 4, "_source_roundId": "TBD" },
+          { "id": 5, "stage_id": 1, "group_id": 1, "number": 5, "_source_roundId": "TBD" },
+      
+          { "_comment": "--- Pool 2 rounds (group_id: 2) ---" },
+          { "id": 6,  "stage_id": 1, "group_id": 2, "number": 1, "_source_roundId": "2119a7ba" },
+          { "id": 7,  "stage_id": 1, "group_id": 2, "number": 2, "_source_roundId": "c47395ed" },
+          { "id": 8,  "stage_id": 1, "group_id": 2, "number": 3, "_source_roundId": "627b443f" },
+          { "id": 9,  "stage_id": 1, "group_id": 2, "number": 4, "_source_roundId": "ab26978b" },
+          { "id": 10, "stage_id": 1, "group_id": 2, "number": 5, "_source_roundId": "TBD (remaining Pool 2 rounds)" },
+          { "id": 11, "stage_id": 1, "group_id": 2, "number": 6, "_source_roundId": "TBD" },
+      
+          { "_comment": "--- Pool 3 rounds (group_id: 3) ---" },
+          { "id": 12, "stage_id": 1, "group_id": 3, "number": 1, "_source_roundId": "b7f98627" },
+          { "id": 13, "stage_id": 1, "group_id": 3, "number": 2, "_source_roundId": "8d73414f" },
+          { "id": 14, "stage_id": 1, "group_id": 3, "number": 3, "_source_roundId": "TBD (remaining Pool 3 rounds)" }
+        ],
+        "match": [
+          { "_comment": "=== POOL 1 (group_id: 1) ===" },
+          { "_comment": "--- Pool 1 Round 1 (round_id: 1, source: 0a78474c) — 2 matches ---" },
+          {
+            "id": 1,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 1, "score": 0, "result": null },
+            "opponent2": { "id": 2, "score": 0, "result": null },
+            "_note": "Alice Seven vs Daniel Brown (source: d8e5a8fa)"
+          },
+          {
+            "id": 2,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 1,
+            "number": 2,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 3, "score": 0, "result": null },
+            "opponent2": { "id": 4, "score": 0, "result": null },
+            "_note": "Henry Zoi vs Lenord DiCaprio (source: e0ba43bf)"
+          },
+          { "_comment": "--- Pool 1 Round 2 (round_id: 2, source: 2e08d671) ---" },
+          {
+            "id": 3,
+            "stage_id": 1,
+            "group_id": 1,
+            "round_id": 2,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 5, "score": 0, "result": null },
+            "opponent2": { "id": 4, "score": 0, "result": null },
+            "_note": "John Doe vs Lenord DiCaprio (source: f0949fc2)"
+          },
+      
+          { "_comment": "=== POOL 2 (group_id: 2) ===" },
+          { "_comment": "--- Pool 2 Round 1 (round_id: 6, source: 2119a7ba) ---" },
+          {
+            "id": 4,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 6,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 6, "score": 0, "result": null },
+            "opponent2": { "id": 7, "score": 0, "result": null },
+            "_note": "Chris Hemsworth vs Tom Cruise (source: c555d090)"
+          },
+          { "_comment": "--- Pool 2 Round 2 (round_id: 7, source: c47395ed) ---" },
+          {
+            "id": 5,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 7,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 8, "score": 0, "result": null },
+            "opponent2": { "id": 6, "score": 0, "result": null },
+            "_note": "Collins Benjamin vs Chris Hemsworth (source: 440e8786)"
+          },
+          { "_comment": "--- Pool 2 Round 3 (round_id: 8, source: 627b443f) — 2 matches ---" },
+          {
+            "id": 6,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 8,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 8, "score": 0, "result": null },
+            "opponent2": { "id": 7, "score": 0, "result": null },
+            "_note": "Collins Benjamin vs Tom Cruise (source: ab9e565d)"
+          },
+          {
+            "id": 7,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 8,
+            "number": 2,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 9, "score": 0, "result": null },
+            "opponent2": { "id": 6, "score": 0, "result": null },
+            "_note": "Samuel Harris vs Chris Hemsworth (source: 005ace60) — NOTE: same roundId as match above but Samuel Harris not in other match, so this is valid"
+          },
+          { "_comment": "--- Pool 2 Round 4 (round_id: 9, source: ab26978b) ---" },
+          {
+            "id": 8,
+            "stage_id": 1,
+            "group_id": 2,
+            "round_id": 9,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 9, "score": 0, "result": null },
+            "opponent2": { "id": 7, "score": 0, "result": null },
+            "_note": "Samuel Harris vs Tom Cruise (source: 5457ddac)"
+          },
+      
+          { "_comment": "=== POOL 3 (group_id: 3) ===" },
+          { "_comment": "--- Pool 3 Round 1 (round_id: 12, source: b7f98627) ---" },
+          {
+            "id": 9,
+            "stage_id": 1,
+            "group_id": 3,
+            "round_id": 12,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 10, "score": 0, "result": null },
+            "opponent2": { "id": 11, "score": 0, "result": null },
+            "_note": "Thompson Oliver vs James Anderson (source: d559a5d6)"
+          },
+          { "_comment": "--- Pool 3 Round 2 (round_id: 13, source: 8d73414f) ---" },
+          {
+            "id": 10,
+            "stage_id": 1,
+            "group_id": 3,
+            "round_id": 13,
+            "number": 1,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": { "id": 12, "score": 0, "result": null },
+            "opponent2": { "id": 11, "score": 0, "result": null },
+            "_note": "Morgan Johnny vs James Anderson (source: 9dff497d)"
+          }
+        ],
+        "participant": [
+          { "_comment": "Pool 1 players" },
+          { "id": 1,  "tournament_id": 1, "name": "Alice Seven" },
+          { "id": 2,  "tournament_id": 1, "name": "Daniel Brown" },
+          { "id": 3,  "tournament_id": 1, "name": "Henry Zoi" },
+          { "id": 4,  "tournament_id": 1, "name": "Lenord DiCaprio" },
+          { "id": 5,  "tournament_id": 1, "name": "John Doe" },
+          { "_comment": "Pool 2 players" },
+          { "id": 6,  "tournament_id": 1, "name": "Chris Hemsworth" },
+          { "id": 7,  "tournament_id": 1, "name": "Tom Cruise" },
+          { "id": 8,  "tournament_id": 1, "name": "Collins Benjamin" },
+          { "id": 9,  "tournament_id": 1, "name": "Samuel Harris" },
+          { "_comment": "Pool 3 players" },
+          { "id": 10, "tournament_id": 1, "name": "Thompson Oliver" },
+          { "id": 11, "tournament_id": 1, "name": "James Anderson" },
+          { "id": 12, "tournament_id": 1, "name": "Morgan Johnny" },
+          { "_comment": "Remaining 2 players not seen in page 1 data — add once identified from full dataset" },
+          { "id": 13, "tournament_id": 1, "name": "TBD - Player 13" },
+          { "id": 14, "tournament_id": 1, "name": "TBD - Player 14" }
+        ]
+      },
+
+    "Swiss": {
+  "_notes": [
+    "brackets-model does NOT have a native 'Swiss' StageType.",
+    "Swiss system maps to type 'round_robin' — it is the closest fit the package supports.",
+    "Key difference to document for your frontend: Swiss rounds are NOT pre-generated. Round 2+ pairings are determined AFTER Round 1 results are entered (pairing by current standings). This means your backend must generate each next round dynamically.",
+    "For brackets-model purposes, treat Swiss as round_robin with groupCount: 1. Rounds are added incrementally.",
+    "Your data shows 1 round (totalCount: 7, totalPages: 1) = Round 1 with 7 matches for 14 players.",
+    "Rounds 2-N must be fetched and added to this structure as they are generated by your backend.",
+    "Each Swiss round will have 7 matches (14 players / 2), for however many rounds are configured."
+  ],
+  "stage": [
+    {
+      "id": 1,
+      "tournament_id": 1,
+      "name": "Swiss 1 - Test - 14 Players",
+      "type": "round_robin",
+      "number": 1,
+      "settings": {
+        "size": 14,
+        "groupCount": 1,
+        "roundRobinMode": "simple",
+        "_swiss_note": "Swiss pairings are dynamic — rounds are not pre-generated. This is Round 1 only. Add rounds incrementally as your backend generates them.",
+        "seedOrdering": ["groups.natural"]
+      }
+    }
+  ],
+  "group": [
+    {
+      "id": 1,
+      "stage_id": 1,
+      "number": 1,
+      "_note": "All 14 players in a single Swiss group"
+    }
+  ],
+  "round": [
+    {
+      "id": 1,
+      "stage_id": 1,
+      "group_id": 1,
+      "number": 1,
+      "_source_roundId": "e6e4c0d6-f921-4c0a-8203-c6c2127b136d",
+      "_note": "Round 1 — all 7 matches in this round share this UUID from your backend"
+    }
+  ],
+  "match": [
+    { "_comment": "--- Swiss Round 1 (round_id: 1, source: e6e4c0d6) — 7 matches, all status: Ready (2) ---" },
+    {
+      "id": 1,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 1,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 1,  "score": 0, "result": null },
+      "opponent2": { "id": 2,  "score": 0, "result": null },
+      "_note": "Henry Zoi vs James Anderson (source: f94fe467)"
+    },
+    {
+      "id": 2,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 2,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 3,  "score": 0, "result": null },
+      "opponent2": { "id": 4,  "score": 0, "result": null },
+      "_note": "Samuel Harris vs Daniel Brown (source: b684ad7b)"
+    },
+    {
+      "id": 3,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 3,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 5,  "score": 0, "result": null },
+      "opponent2": { "id": 6,  "score": 0, "result": null },
+      "_note": "Alice Seven vs Robert Downney (source: 48ed289c)"
+    },
+    {
+      "id": 4,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 4,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 7,  "score": 0, "result": null },
+      "opponent2": { "id": 8,  "score": 0, "result": null },
+      "_note": "Morgan Johnny vs Freeman Deep (source: b123adc6)"
+    },
+    {
+      "id": 5,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 5,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 9,  "score": 0, "result": null },
+      "opponent2": { "id": 10, "score": 0, "result": null },
+      "_note": "Collins Benjamin vs Lenord DiCaprio (source: 72b65a45)"
+    },
+    {
+      "id": 6,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 6,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 11, "score": 0, "result": null },
+      "opponent2": { "id": 12, "score": 0, "result": null },
+      "_note": "Tom Cruise vs Chris Hemsworth (source: b3c7c03d)"
+    },
+    {
+      "id": 7,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 7,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": { "id": 13, "score": 0, "result": null },
+      "opponent2": { "id": 14, "score": 0, "result": null },
+      "_note": "Thompson Oliver vs John Doe (source: 7bb8a5a3)"
+    }
+  ],
+  "participant": [
+    { "id": 1,  "tournament_id": 1, "name": "Henry Zoi" },
+    { "id": 2,  "tournament_id": 1, "name": "James Anderson" },
+    { "id": 3,  "tournament_id": 1, "name": "Samuel Harris" },
+    { "id": 4,  "tournament_id": 1, "name": "Daniel Brown" },
+    { "id": 5,  "tournament_id": 1, "name": "Alice Seven" },
+    { "id": 6,  "tournament_id": 1, "name": "Robert Downney" },
+    { "id": 7,  "tournament_id": 1, "name": "Morgan Johnny" },
+    { "id": 8,  "tournament_id": 1, "name": "Freeman Deep" },
+    { "id": 9,  "tournament_id": 1, "name": "Collins Benjamin" },
+    { "id": 10, "tournament_id": 1, "name": "Lenord DiCaprio" },
+    { "id": 11, "tournament_id": 1, "name": "Tom Cruise" },
+    { "id": 12, "tournament_id": 1, "name": "Chris Hemsworth" },
+    { "id": 13, "tournament_id": 1, "name": "Thompson Oliver" },
+    { "id": 14, "tournament_id": 1, "name": "John Doe" }
+  ]
+}
+}
