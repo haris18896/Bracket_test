@@ -1,7 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { matchesData } from "@/data/matches.js";
+import {
+  single_elimination,
+  double_elimination,
+  pool_play,
+  round_robin,
+  swiss,
+} from "@/data/index";
+// import matchesData from "@/data/matches.json";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -441,9 +448,7 @@ function MatchPanel({ match, participants, isDark, onClose }: MatchPanelProps) {
                   }}
                 >
                   {opp.framesWon ?? 0}/{opp.totalFrames ?? "?"} frames
-                  {opp.winningCondition
-                    ? ` · ${opp.winningCondition}`
-                    : ""}
+                  {opp.winningCondition ? ` · ${opp.winningCondition}` : ""}
                 </div>
               )}
             </div>
@@ -577,20 +582,16 @@ export default function Home() {
   const dataMap = useMemo<Record<TournamentTabKey, CleanedData>>(
     () => ({
       single: cleanViewerData(
-        matchesData.single_elimination as unknown as BracketsViewerData,
+        single_elimination as unknown as BracketsViewerData,
       ),
       double: cleanViewerData(
-        matchesData.double_elimination as unknown as BracketsViewerData,
+        double_elimination as unknown as BracketsViewerData,
       ),
-      pool: cleanViewerData(
-        matchesData.pool_play as unknown as BracketsViewerData,
-      ),
+      pool: cleanViewerData(pool_play as unknown as BracketsViewerData),
       round_robin: cleanViewerData(
-        matchesData.round_robin as unknown as BracketsViewerData,
+        round_robin as unknown as BracketsViewerData,
       ),
-      swiss: cleanViewerData(
-        matchesData.swiss as unknown as BracketsViewerData,
-      ),
+      swiss: cleanViewerData(swiss as unknown as BracketsViewerData),
     }),
     [],
   );
@@ -627,11 +628,8 @@ export default function Home() {
       if (w.bracketsViewer.onMatchClicked) {
         w.bracketsViewer.onMatchClicked((match) => {
           const m = match as BracketsViewerMatch;
-          // Only allow click on Ready (2) or Running (3) matches
-          if (m.status === 2 || m.status === 3) {
-            setSelectedMatch(m);
-            console.log("[Match Clicked]", m);
-          }
+          setSelectedMatch(m);
+          console.log("[Match Clicked]", m);
         });
       }
 
