@@ -130,7 +130,7 @@ const DARK_CSS = `
     /* brackets-viewer vX variables (from web styles) */
     --primary-background: #0A1A2C;
     --secondary-background: #0A1A2C;
-    --match-background: #0A1A2C;
+    --match-background: #1a2e40;
     --font-color: #e2e8f0;
     --win-color: #22c55e;
     --loss-color: #ef4444;
@@ -294,75 +294,90 @@ const EXTRA_CSS = `
 
   /* ── Grouped stages layout tweaks (Pool / Round Robin / Swiss) ───────────── */
 
-  /* Container for grouped stages: lay groups out horizontally */
+  /* Container for grouped stages: stack groups vertically */
   #round-robin-viewer .round-robin,
   #pool-viewer .round-robin,
   #swiss-viewer .round-robin {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap !important; /* keep all groups on a single horizontal line */
-    align-items: flex-start;
-    gap: 32px;
+    flex-direction: column;
+    gap: 28px;
     padding: 8px 4px 16px;
+    width: 100%;
   }
 
-  /* Each group is a vertical card: header, table, then rounds */
+  /* Each group is a two-column row: table on the left, rounds list on the right */
   #round-robin-viewer .round-robin .group,
   #pool-viewer .round-robin .group,
   #swiss-viewer .round-robin .group {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 0 0 420px; /* fixed-ish width so groups form a neat row */
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1.4fr);
+    column-gap: 32px;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
   }
 
-  /* Ensure group title centered */
+  /* Group title spans across both columns */
   #round-robin-viewer .round-robin .group > h2,
   #pool-viewer .round-robin .group > h2,
   #swiss-viewer .round-robin .group > h2 {
-    text-align: center;
-    margin-bottom: 4px;
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
   }
 
-  /* Place the standings table at the top of the group */
+  /* Standings table takes the full left column */
   #round-robin-viewer .round-robin .group > table,
   #pool-viewer .round-robin .group > table,
   #swiss-viewer .round-robin .group > table {
-    order: 1;
-    align-self: center;
+    grid-column: 1 / 2;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
-  /* Rounds come after the table, horizontally centered */
-  #round-robin-viewer .round-robin .group > .round,
-  #pool-viewer .round-robin .group > .round,
-  #swiss-viewer .round-robin .group > .round {
-    order: 2;
+  /* Rounds pane lives in the right column and scrolls if tall */
+  #round-robin-viewer .round-robin .group .group-rounds-pane,
+  #pool-viewer .round-robin .group .group-rounds-pane,
+  #swiss-viewer .round-robin .group .group-rounds-pane {
+    grid-column: 2 / 3;
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 4px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 12px;
   }
 
-  /* Round title centered */
-  #round-robin-viewer .round-robin .group > .round > h3,
-  #pool-viewer .round-robin .group > .round > h3,
-  #swiss-viewer .round-robin .group > .round > h3 {
-    text-align: center;
-    margin-bottom: 4px;
+  /* Each round inside the pane is a vertical stack, matches centered */
+  #round-robin-viewer .round-robin .group .group-rounds-pane .round,
+  #pool-viewer .round-robin .group .group-rounds-pane .round,
+  #swiss-viewer .round-robin .group .group-rounds-pane .round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
-  /* Matches in a round centered with even spacing */
-  #round-robin-viewer .round-robin .group > .round > .match,
-  #pool-viewer .round-robin .group > .round > .match,
-  #swiss-viewer .round-robin .group > .round > .match {
+  #round-robin-viewer .round-robin .group .group-rounds-pane .round > h3,
+  #pool-viewer .round-robin .group .group-rounds-pane .round > h3,
+  #swiss-viewer .round-robin .group .group-rounds-pane .round > h3 {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  #round-robin-viewer .round-robin .group .group-rounds-pane .round > .match,
+  #pool-viewer .round-robin .group .group-rounds-pane .round > .match,
+  #swiss-viewer .round-robin .group .group-rounds-pane .round > .match {
     margin: 0 auto;
   }
 
-  /* In case there are multiple matches per round, wrap them neatly and center */
-  #round-robin-viewer .round-robin .group > .round,
-  #pool-viewer .round-robin .group > .round,
-  #swiss-viewer .round-robin .group > .round {
-    flex-wrap: wrap;
+  /* Hide the auto-generated stage title (e.g. "Round Robin 1 - Test - 14 Players") */
+  #round-robin-viewer .round-robin > h1,
+  #pool-viewer .round-robin > h1,
+  #swiss-viewer .round-robin > h1 {
+    display: none;
   }
 
   /* Disabled / completed / cancelled matches */
@@ -1083,6 +1098,53 @@ export default function Home() {
             span.textContent = initials.toUpperCase();
             span.classList.add("participant-initials");
           });
+
+        // For grouped formats (pool / round robin / swiss), wrap rounds of each
+        // group into a right-hand scrollable pane so that the table sits on the
+        // left and the rounds list on the right.
+        if (tab === "pool" || tab === "round_robin" || tab === "swiss") {
+          const rrRoot = container.querySelector<HTMLElement>(".round-robin");
+          if (rrRoot) {
+            rrRoot
+              .querySelectorAll<HTMLElement>(".group")
+              .forEach((groupEl) => {
+                const tableEl = groupEl.querySelector("table");
+                // Select only direct child rounds (not already wrapped)
+                const directRounds = Array.from(
+                  groupEl.querySelectorAll<HTMLElement>(
+                    ":scope > article.round",
+                  ),
+                );
+                if (!tableEl || directRounds.length === 0) return;
+
+                // Ensure table appears before the rounds in DOM (helps with semantics)
+                const firstRound = directRounds[0];
+                if (
+                  firstRound &&
+                  tableEl.compareDocumentPosition(firstRound) &
+                    Node.DOCUMENT_POSITION_FOLLOWING
+                ) {
+                  groupEl.insertBefore(tableEl, firstRound);
+                }
+
+                let pane =
+                  groupEl.querySelector<HTMLElement>(".group-rounds-pane");
+                if (!pane) {
+                  pane = document.createElement("div");
+                  pane.className = "group-rounds-pane";
+                  groupEl.appendChild(pane);
+                }
+
+                // Move direct child rounds into the pane so CSS grid can treat the
+                // pane as the right column containing a vertical list.
+                directRounds.forEach((r) => {
+                  if (r.parentElement === groupEl) {
+                    pane!.appendChild(r);
+                  }
+                });
+              });
+          }
+        }
       }, 150);
     },
     [dataMap],
