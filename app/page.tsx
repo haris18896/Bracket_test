@@ -390,6 +390,34 @@ const EXTRA_CSS = `
     white-space: nowrap;
   }
 
+  .brackets-viewer .match .match-status-tag {
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 600;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, border-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .brackets-viewer .match .match-status-tag[data-variant='cancelled'] {
+    background: rgba(248, 113, 113, 0.15); /* light red */
+    border: 1px solid rgba(248, 113, 113, 0.6);
+    color: #f87171;
+  }
+
+  .brackets-viewer .match .match-status-tag[data-variant='completed'] {
+    background: rgba(34, 197, 94, 0.15); /* light green */
+    border: 1px solid rgba(34, 197, 94, 0.6);
+    color: #22c55e;
+  }
+
   /* Status dot */
   .match-status-dot {
     display: inline-block;
@@ -883,7 +911,28 @@ export default function Home() {
             tableTag.style.display = "none";
           }
 
-          console.log(match.status);
+          // Inject / Update status tag (Completed, Cancelled) on top-right corner
+          const statusClass = "match-status-tag";
+          let statusTag = el.querySelector<HTMLDivElement>(`.${statusClass}`);
+          if (!statusTag) {
+            statusTag = document.createElement("div");
+            statusTag.className = statusClass;
+            el.appendChild(statusTag);
+          }
+          if (match.status === 0) {
+            statusTag.textContent = "Cancelled";
+            statusTag.style.display = "inline-flex";
+            statusTag.setAttribute("data-variant", "cancelled");
+          } else if (match.status === 1) {
+            statusTag.textContent = "Completed";
+            statusTag.style.display = "inline-flex";
+            statusTag.setAttribute("data-variant", "completed");
+          } else {
+            statusTag.textContent = "";
+            statusTag.style.display = "none";
+            statusTag.removeAttribute("data-variant");
+          }
+
           // Mark winner / loser participants for completed matches:
           // infer completion from scores / numeric results as well as status.
           const winnerIds = new Set<number>();
