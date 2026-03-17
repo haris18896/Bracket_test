@@ -188,6 +188,10 @@ const DARK_CSS = `
     --bv-table-header-color: #38bdf8;
     --bv-table-row-color: #cbd5e1;
     --bv-table-row-hover-background: #172033;
+
+    --bv-winner-name-color: #22c55e;
+    --bv-participant-initial-background: #1e293b;
+    --bv-participant-initial-color: #e2e8f0;
   }
 `;
 
@@ -236,7 +240,10 @@ const LIGHT_CSS = `
     --bv-table-row-color: #334155;
     --bv-table-row-hover-background: #f0f9ff;
 
-    
+    --bv-winner-name-color: #1c6336;
+    --bv-loser-name-color: #7a1d1d;
+    --bv-participant-initial-background: #f8fafc;
+    --bv-participant-initial-color: #0A1A2C;
   }
 `;
 
@@ -309,12 +316,14 @@ const EXTRA_CSS = `
   /* Winner / loser emphasis for completed matches */
   .brackets-viewer .match.is-complete .participant.is-winner {
     background: linear-gradient(135deg, rgba(34,197,94,0.18), rgba(34,197,94,0.05)) !important;
-    border-radius: 8px;
     font-weight: 600;
-    color: #bbf7d0 !important;
+    color: var(--bv-winner-name-color) !important;
   }
   .brackets-viewer .match.is-complete .participant.is-loser {
     opacity: 0.65;
+    color: var(--bv-loser-name-color) !important;
+    background: linear-gradient(135deg, rgba(239,68,68,0.18), rgba(239,68,68,0.05)) !important;
+    font-weight: 600;
   }
 
   /* Slightly tighter vertical spacing between opponents */
@@ -351,8 +360,8 @@ const EXTRA_CSS = `
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.03em;
-    background: rgba(15, 23, 42, 0.95);
-    color: #e2e8f0;
+    background: var(--bv-participant-initial-background);
+    color: var(--bv-participant-initial-color);
     border: 1px solid rgba(148, 163, 184, 0.6);
   }
 
