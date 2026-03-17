@@ -115,23 +115,46 @@ function cleanViewerData(data: BracketsViewerData): CleanedData {
 const DARK_CSS = `
   .brackets-viewer {
     --bv-font-family: 'DM Mono', 'Fira Code', monospace;
-    --bv-match-border-radius: 8px;
+    --bv-match-border-radius: 10px;
     --bv-match-border-width: 1px;
-    --bv-opponent-border-radius: 6px;
+    --bv-opponent-border-radius: 8px;
 
     /* Overall bracket background */
-    background: radial-gradient(circle at top left, #0b1a2c 0%, #0b1a2c 35%, #040B15 100%);
+    background: radial-gradient(circle at top left, #020617 0%, #020617 35%, #020617 100%);
 
-    /* Backgrounds */
-    --bv-match-background: #111827;
+    /* brackets-viewer vX variables (from web styles) */
+    --primary-background: #0A1A2C;
+    --secondary-background: #0A1A2C;
+    --match-background: #0A1A2C;
+    --font-color: #e2e8f0;
+    --win-color: #22c55e;
+    --loss-color: #ef4444;
+    --label-color: #64748b;
+    --hint-color: #94a3b8;
+    --connector-color: #1e293b;
+    --border-color: #1f2937;
+    --border-hover-color: #38bdf8;
+    --border-selected-color: #38bdf8;
+    --text-size: 12px;
+    --round-margin: 40px;
+    --match-width: 170px;
+    --match-horizontal-padding: 8px;
+    --match-vertical-padding: 6px;
+    --connector-border-width: 2px;
+    --match-border-width: 1px;
+    --match-border-radius: 0.5em;
+    --participant-image-size: 1.2em;
+
+    /* Our extended backgrounds */
+    --bv-match-background: #020617;
     --bv-match-border-color: #1f2937;
-    --bv-opponent-background: #0f172a;
-    --bv-opponent-border-color: #1e3a5f;
+    --bv-opponent-background: #020617;
+    --bv-opponent-border-color: #111827;
 
     /* Text */
-    --bv-opponent-name-color: red;
-    --bv-opponent-score-color: blue;
-    --bv-match-label-color: green;
+    --bv-opponent-name-color: #e2e8f0;
+    --bv-opponent-score-color: #38bdf8;
+    --bv-match-label-color: #64748b;
 
     /* States */
     --bv-win-background: #0c2337;
@@ -242,28 +265,34 @@ const EXTRA_CSS = `
   .brackets-viewer .match[data-disabled="true"] {
     cursor: not-allowed;
     opacity: 0.6;
-    // background-color: red
   }
 
   /* Match card styling – compact, pill-like */
   .brackets-viewer .match {
-    border-radius: var(--bv-match-border-radius);
-    // border-width: var(--bv-match-border-width);
-    // border-style: solid;
-    // border-color: var(--bv-match-border-color);
-    // box-shadow: 0 8px 20px rgba(15, 23, 42, 0.6);
-    // background: var(--bv-match-background);
-    padding: 4px 10px;
-    min-width: 250px;
-    align-items: center;
-    justify-content: center;
+    border-radius: var(--bv-match-border-radius) !important;
+    // border-width: var(--bv-match-border-width) !important;
+    // border-style: solid !important;
+    // border-color: var(--bv-match-border-color) !important;
+    // box-shadow: 0 14px 30px rgba(15, 23, 42, 0.8) !important;
+    background: var(--bv-match-background) !important;
+    padding: 6px 14px !important;
+    min-width: 260px;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   /* Opponent rows inside a match */
   .brackets-viewer .match .opponent {
-    border-radius: var(--bv-opponent-border-radius);
-    background: transparent;
-    padding: 4px 6px;
+    border-radius: var(--bv-opponent-border-radius) !important;
+    background: var(--bv-opponent-background) !important;
+    border: 1px solid var(--bv-opponent-border-color) !important;
+    padding: 4px 6px !important;
+    color: var(--bv-opponent-name-color) !important;
+  }
+
+  /* Ensure inner participant wrapper does not reintroduce white background */
+  .brackets-viewer .match .opponent .participant {
+    background: transparent !important;
   }
 
   /* Slightly tighter vertical spacing between opponents */
@@ -598,7 +627,7 @@ const VIEWER_CONFIGS: Record<
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TournamentTabKey>("single");
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [selectedMatch, setSelectedMatch] =
     useState<BracketsViewerMatch | null>(null);
   const styleTagRef = useRef<HTMLStyleElement | null>(null);
