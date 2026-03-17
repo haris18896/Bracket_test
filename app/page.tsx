@@ -196,6 +196,7 @@ const DARK_CSS = `
     --bv-winner-name-color: #22c55e;
     --bv-participant-initial-background: #1e293b;
     --bv-participant-initial-color: #e2e8f0;
+    --bv-border-hover-color: #948d25;
   }
 `;
 
@@ -250,6 +251,7 @@ const LIGHT_CSS = `
     --bv-loser-name-color: #7a1d1d;
     --bv-participant-initial-background: #f8fafc;
     --bv-participant-initial-color: #0A1A2C;
+    --bv-border-hover-color: #948d25;
   }
 `;
 
@@ -273,7 +275,16 @@ const EXTRA_CSS = `
   }
   .brackets-viewer .match[data-clickable="true"]:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+    // box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+  }
+
+  .brackets-viewer .match[data-clickable="true"]:hover .opponents {
+    border-color: var(--border-hover-color) !important;
+    opacity: 1;
+  }
+
+  .brackets-viewer .match[data-clickable="true"]:hover .opponent {
+    background: var(--match-background) !important;
   }
 
   /* Disabled / completed / cancelled matches */
@@ -285,10 +296,6 @@ const EXTRA_CSS = `
   /* Match card styling – compact, pill-like */
   .brackets-viewer .match {
     border-radius: var(--bv-match-border-radius) !important;
-    // border-width: var(--bv-match-border-width) !important;
-    // border-style: solid !important;
-    // border-color: var(--bv-match-border-color) !important;
-    // box-shadow: 0 14px 30px rgba(15, 23, 42, 0.8) !important;
     background: var(--bv-match-background) !important;
     padding: 6px 14px !important;
     min-width: 260px;
@@ -316,8 +323,13 @@ const EXTRA_CSS = `
   .brackets-viewer .match[data-status="4"] .opponents {
     border-color: #22c55e !important;
   }
-  .brackets-viewer .match[data-status="5"] .opponents {
+  .brackets-viewer .match[data-status="0"] .opponents {
     border-color: #ef4444 !important;
+  }
+
+  .brackets-viewer .match[data-status="2"] .opponents {
+    border-color: var(--bv-match-border-color) !important;
+    opacity: 0.8;
   }
 
   /* Winner / loser emphasis for completed matches */
