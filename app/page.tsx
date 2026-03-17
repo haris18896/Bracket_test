@@ -1,18 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
-import {
-  single_elimination,
-  double_elimination,
-  pool_play,
-  round_robin,
-  swiss,
-} from "@/data/index";
-// import matchesData from "@/data/matches.json";
+
+import SingleEliminationData from "@/data/single_elimination.json";
+import DoubleEliminationData from "@/data/double_elimination.json";
+import PoolPlayData from "@/data/pool_play.json";
+import RoundRobinData from "@/data/round_robin.json";
+import SwissData from "@/data/swiss.json";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-
-type DoubleEliminationModel = (typeof matchesData)["double_elimination"];
 type TournamentTabKey = "single" | "double" | "pool" | "round_robin" | "swiss";
 
 type BracketsViewerParticipant = {
@@ -582,16 +578,16 @@ export default function Home() {
   const dataMap = useMemo<Record<TournamentTabKey, CleanedData>>(
     () => ({
       single: cleanViewerData(
-        single_elimination as unknown as BracketsViewerData,
+        SingleEliminationData as unknown as BracketsViewerData,
       ),
       double: cleanViewerData(
-        double_elimination as unknown as BracketsViewerData,
+        DoubleEliminationData as unknown as BracketsViewerData,
       ),
-      pool: cleanViewerData(pool_play as unknown as BracketsViewerData),
+      pool: cleanViewerData(PoolPlayData as unknown as BracketsViewerData),
       round_robin: cleanViewerData(
-        round_robin as unknown as BracketsViewerData,
+        RoundRobinData as unknown as BracketsViewerData,
       ),
-      swiss: cleanViewerData(swiss as unknown as BracketsViewerData),
+      swiss: cleanViewerData(SwissData as unknown as BracketsViewerData),
     }),
     [],
   );
