@@ -235,6 +235,8 @@ const LIGHT_CSS = `
     --bv-table-header-color: #1d4ed8;
     --bv-table-row-color: #334155;
     --bv-table-row-hover-background: #f0f9ff;
+
+    
   }
 `;
 
@@ -293,6 +295,26 @@ const EXTRA_CSS = `
   /* Ensure inner participant wrapper does not reintroduce white background */
   .brackets-viewer .match .opponent .participant {
     background: transparent !important;
+  }
+
+  /* Completed (4) and cancelled (5) borders */
+  .brackets-viewer .match.is-complete .opponents,
+  .brackets-viewer .match[data-status="4"] .opponents {
+    border-color: #22c55e !important;
+  }
+  .brackets-viewer .match[data-status="5"] .opponents {
+    border-color: #ef4444 !important;
+  }
+
+  /* Winner / loser emphasis for completed matches */
+  .brackets-viewer .match.is-complete .participant.is-winner {
+    background: linear-gradient(135deg, rgba(34,197,94,0.18), rgba(34,197,94,0.05)) !important;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #bbf7d0 !important;
+  }
+  .brackets-viewer .match.is-complete .participant.is-loser {
+    opacity: 0.65;
   }
 
   /* Slightly tighter vertical spacing between opponents */
@@ -755,12 +777,60 @@ export default function Home() {
 
           el.setAttribute("data-disabled", String(isDisabled));
           el.setAttribute("data-clickable", String(isClickable));
+          el.setAttribute("data-status", String(match.status));
 
           // Status tooltip
           el.setAttribute(
             "title",
             `Match #${match.id} · ${STATUS_LABEL[match.status] ?? "Unknown"}`,
           );
+          // Mark winner / loser participants for completed matches:
+          // infer completion from scores / numeric results as well as status.
+          const winnerIds = new Set<number>();
+          const loserIds = new Set<number>();
+
+          const o1 = match.opponent1;
+          const o2 = match.opponent2;
+
+          // Prefer explicit numeric scores if present
+          if (typeof o1?.score === "number" && typeof o2?.score === "number") {
+            if (o1.score > o2.score && o1.id != null) winnerIds.add(o1.id);
+            if (o2.score > o1.score && o2.id != null) winnerIds.add(o2.id);
+            if (o1.score !== o2.score) {
+              if (o1.score < o2.score && o1.id != null) loserIds.add(o1.id);
+              if (o2.score < o1.score && o2.id != null) loserIds.add(o2.id);
+            }
+          }
+
+          // Fallback to numeric result field if used (1 / -1 / 0)
+          const res1 = (o1 as any)?.result;
+          const res2 = (o2 as any)?.result;
+          if (winnerIds.size === 0) {
+            if (typeof res1 === "number" && res1 > 0 && o1?.id != null)
+              winnerIds.add(o1.id);
+            if (typeof res2 === "number" && res2 > 0 && o2?.id != null)
+              winnerIds.add(o2.id);
+            if (typeof res1 === "number" && res1 < 0 && o1?.id != null)
+              loserIds.add(o1.id);
+            if (typeof res2 === "number" && res2 < 0 && o2?.id != null)
+              loserIds.add(o2.id);
+          }
+
+          const hasResult = winnerIds.size > 0;
+          if (hasResult) {
+            el.classList.add("is-complete");
+            el.querySelectorAll<HTMLElement>(".participant").forEach((pEl) => {
+              const pidAttr = pEl.getAttribute("data-participant-id");
+              if (!pidAttr) return;
+              const pid = Number(pidAttr);
+              if (!Number.isFinite(pid)) return;
+              if (winnerIds.has(pid)) {
+                pEl.classList.add("is-winner");
+              } else if (loserIds.has(pid)) {
+                pEl.classList.add("is-loser");
+              }
+            });
+          }
         });
 
         // Replace "#null" prefix with styled player initials based on title attribute
