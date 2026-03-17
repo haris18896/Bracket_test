@@ -316,6 +316,11 @@ const EXTRA_CSS = `
     opacity: 0.45;
     font-size: 0.8em;
   }
+
+  .brackets-viewer .bracket .rounds .round {
+    align-items: center !important;
+    justify-content: center !important;
+  }
 `;
 
 // ─── Match Info Panel ──────────────────────────────────────────────────────────
