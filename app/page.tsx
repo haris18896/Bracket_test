@@ -282,6 +282,7 @@ const EXTRA_CSS = `
     // box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
   }
 
+
   .brackets-viewer .match[data-clickable="true"]:hover .opponents {
     border-color: var(--border-hover-color) !important;
     opacity: 1;
@@ -289,6 +290,75 @@ const EXTRA_CSS = `
 
   .brackets-viewer .match[data-clickable="true"]:hover .opponent {
     background: var(--match-background) !important;
+  }
+
+  /* ── Grouped stages layout tweaks (Pool / Round Robin / Swiss) ───────────── */
+
+  /* Container for grouped stages */
+  #round-robin-viewer .round-robin,
+  #pool-viewer .round-robin,
+  #swiss-viewer .round-robin {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* Each group stacks: header, table, then rounds */
+  #round-robin-viewer .round-robin .group,
+  #pool-viewer .round-robin .group,
+  #swiss-viewer .round-robin .group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Ensure group title centered */
+  #round-robin-viewer .round-robin .group > h2,
+  #pool-viewer .round-robin .group > h2,
+  #swiss-viewer .round-robin .group > h2 {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  /* Place the standings table at the top of the group */
+  #round-robin-viewer .round-robin .group > table,
+  #pool-viewer .round-robin .group > table,
+  #swiss-viewer .round-robin .group > table {
+    order: 1;
+    align-self: center;
+  }
+
+  /* Rounds come after the table, horizontally centered */
+  #round-robin-viewer .round-robin .group > .round,
+  #pool-viewer .round-robin .group > .round,
+  #swiss-viewer .round-robin .group > .round {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Round title centered */
+  #round-robin-viewer .round-robin .group > .round > h3,
+  #pool-viewer .round-robin .group > .round > h3,
+  #swiss-viewer .round-robin .group > .round > h3 {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  /* Matches in a round centered with even spacing */
+  #round-robin-viewer .round-robin .group > .round > .match,
+  #pool-viewer .round-robin .group > .round > .match,
+  #swiss-viewer .round-robin .group > .round > .match {
+    margin: 0 auto;
+  }
+
+  /* In case there are multiple matches per round, wrap them neatly and center */
+  #round-robin-viewer .round-robin .group > .round,
+  #pool-viewer .round-robin .group > .round,
+  #swiss-viewer .round-robin .group > .round {
+    flex-wrap: wrap;
   }
 
   /* Disabled / completed / cancelled matches */
