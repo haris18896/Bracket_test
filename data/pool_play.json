@@ -19,17 +19,20 @@
     {
       "id": 1,
       "stage_id": 1,
-      "number": 1
+      "number": 1,
+      "_note": null
     },
     {
       "id": 2,
       "stage_id": 1,
-      "number": 2
+      "number": 2,
+      "_note": null
     },
     {
       "id": 3,
       "stage_id": 1,
-      "number": 3
+      "number": 3,
+      "_note": null
     }
   ],
   "round": [
@@ -137,7 +140,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "e7aa3fd2-27ae-4ebd-ba43-69f342d02778",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": 1,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 2,
@@ -163,7 +180,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "e7aa3fd2-27ae-4ebd-ba43-69f342d02778",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": 2,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 3,
@@ -189,7 +220,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "802a651d-8f8e-4f31-ad37-8e18702d84fb",
+      "matchStatusId": "14084611-7a12-4e1b-9839-cb0b1008dd8f",
+      "matchStatusCode": "ONGOING",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": "2026-03-17T11:12:18.388398",
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": 3,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 4,
@@ -215,7 +260,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "802a651d-8f8e-4f31-ad37-8e18702d84fb",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": 6,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 5,
@@ -241,7 +300,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "583b8d4c-ee3b-4cd3-9245-f1abe2d80904",
+      "roundGuid": "b80b242d-c66c-4ced-aa50-b71b849b3ab7",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 6,
@@ -267,7 +340,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "583b8d4c-ee3b-4cd3-9245-f1abe2d80904",
+      "roundGuid": "b80b242d-c66c-4ced-aa50-b71b849b3ab7",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 7,
@@ -293,7 +380,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "af74c4b9-0b50-422e-8370-9e4c270e3d31",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 8,
@@ -319,7 +420,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "af74c4b9-0b50-422e-8370-9e4c270e3d31",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 9,
@@ -345,7 +460,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "e7e67bf4-6556-4904-9384-febf6cd57eff",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 10,
@@ -371,7 +500,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "e7e67bf4-6556-4904-9384-febf6cd57eff",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 11,
@@ -397,7 +540,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "583b8d4c-ee3b-4cd3-9245-f1abe2d80904",
+      "roundGuid": "5e1e353b-1379-4d3b-a59b-b2d75d017c5f",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 12,
@@ -423,7 +580,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "583b8d4c-ee3b-4cd3-9245-f1abe2d80904",
+      "roundGuid": "5e1e353b-1379-4d3b-a59b-b2d75d017c5f",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 13,
@@ -449,7 +620,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "4bbb6e7b-ddf1-4863-b45f-0e4b339adf46",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 14,
@@ -475,7 +660,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "4bbb6e7b-ddf1-4863-b45f-0e4b339adf46",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 15,
@@ -501,7 +700,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "4594bc7d-a31e-440a-a5b7-afafb7dbff6d",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 16,
@@ -527,7 +740,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "4594bc7d-a31e-440a-a5b7-afafb7dbff6d",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 17,
@@ -553,7 +780,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "583b8d4c-ee3b-4cd3-9245-f1abe2d80904",
+      "roundGuid": "b9813daa-d41f-428f-91db-26e36c89c58d",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 18,
@@ -579,7 +820,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "583b8d4c-ee3b-4cd3-9245-f1abe2d80904",
+      "roundGuid": "b9813daa-d41f-428f-91db-26e36c89c58d",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 19,
@@ -605,7 +860,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "0d58a47b-7be4-48b8-90d8-01e1b64fa379",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 20,
@@ -631,7 +900,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "0d58a47b-7be4-48b8-90d8-01e1b64fa379",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 21,
@@ -657,7 +940,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "7c5dad11-33ea-4add-9941-0f58136b3fb3",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 22,
@@ -683,7 +980,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "7c5dad11-33ea-4add-9941-0f58136b3fb3",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 23,
@@ -709,7 +1020,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "79c5f347-0375-4916-9088-ed2b20dc035b",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 24,
@@ -735,7 +1060,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "22c6d851-f8df-4383-a99d-2a648407d83f",
+      "roundGuid": "79c5f347-0375-4916-9088-ed2b20dc035b",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 25,
@@ -761,7 +1100,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "8b9667f1-47c8-4e7d-95c2-0e8b483aa705",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     },
     {
       "id": 26,
@@ -787,7 +1140,21 @@
         "forfeit": false,
         "position": null
       },
-      "_note": null
+      "_note": null,
+      "eventId": "df5ddba4-c334-4ee8-8abe-398f0725543e",
+      "bracketId": "0bf45fe6-78f8-4a39-ae7f-18ee4652c7a2",
+      "roundGuid": "8b9667f1-47c8-4e7d-95c2-0e8b483aa705",
+      "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+      "matchStatusCode": "SCHEDULED",
+      "scheduledStart": "2026-03-17T11:41:42.68",
+      "actualStart": null,
+      "actualEnd": null,
+      "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+      "operatorName": null,
+      "tableNumber": null,
+      "winConditionValue": 7,
+      "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+      "winningConditionTypeName": "Highest Score"
     }
   ],
   "participant": [
@@ -795,85 +1162,127 @@
       "id": 1,
       "tournament_id": 1,
       "name": "Daniel Brown",
-      "image": null
+      "image": null,
+      "memberCode": "PH0T9Z",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 2,
       "tournament_id": 1,
       "name": "Lenord DiCaprio",
-      "image": null
+      "image": null,
+      "memberCode": "R30H96",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 3,
       "tournament_id": 1,
       "name": "Collins Benjamin",
-      "image": null
+      "image": null,
+      "memberCode": "A2UN8F",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 4,
       "tournament_id": 1,
       "name": "Robert Downney",
-      "image": null
+      "image": null,
+      "memberCode": "HNPKL9",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 5,
       "tournament_id": 1,
       "name": "Alice Seven",
-      "image": null
+      "image": null,
+      "memberCode": "GWKRD6",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 6,
       "tournament_id": 1,
       "name": "Chris Hemsworth",
-      "image": null
+      "image": null,
+      "memberCode": "ND2E8T",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 7,
       "tournament_id": 1,
       "name": "James Anderson",
-      "image": null
+      "image": null,
+      "memberCode": "LXDMAK",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 8,
       "tournament_id": 1,
       "name": "John doe",
-      "image": null
+      "image": null,
+      "memberCode": "MOOBGK",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 9,
       "tournament_id": 1,
       "name": "Morgan Johnny",
-      "image": null
+      "image": null,
+      "memberCode": "N820L3",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 10,
       "tournament_id": 1,
       "name": "Tom Cruise",
-      "image": null
+      "image": null,
+      "memberCode": "CWJAKU",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 11,
       "tournament_id": 1,
       "name": "Thompson Oliver",
-      "image": null
+      "image": null,
+      "memberCode": "KYOT2Y",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 12,
       "tournament_id": 1,
       "name": "Freeman Deep",
-      "image": null
+      "image": null,
+      "memberCode": "1Z4KKO",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 13,
       "tournament_id": 1,
       "name": "Samuel Harris",
-      "image": null
+      "image": null,
+      "memberCode": "EEAV7Z",
+      "teamId": null,
+      "teamName": null
     },
     {
       "id": 14,
       "tournament_id": 1,
       "name": "Henry zoi",
-      "image": null
+      "image": null,
+      "memberCode": "HO1G5P",
+      "teamId": null,
+      "teamName": null
     }
   ]
 }
