@@ -124,7 +124,8 @@ const DARK_CSS = `
     --bv-match-number-color: #e2e8f0;
 
     /* Overall bracket background */
-    background: radial-gradient(circle at top left, #020617 0%, #020617 35%, #020617 100%);
+    border-radius: 10px;
+    background: radial-gradient(circle at top left, #0A1A2C 0%, #020617 35%, #0A1A2C 100%);
 
     /* brackets-viewer vX variables (from web styles) */
     --primary-background: #0A1A2C;
@@ -208,6 +209,9 @@ const LIGHT_CSS = `
     --bv-opponent-border-radius: 6px;
     --bv-match-number-background: #f8fafc;
     --bv-match-number-color: #0A1A2C;
+
+    border-radius: 10px;
+    background: radial-gradient(circle at top left, #f8fafc 0%, #f8fafc 35%, #EBEFF3 100%);
 
     --bv-match-background: #ffffff;
     --bv-match-border-color: #e2e8f0;
@@ -296,7 +300,7 @@ const EXTRA_CSS = `
   /* Match card styling – compact, pill-like */
   .brackets-viewer .match {
     border-radius: var(--bv-match-border-radius) !important;
-    background: var(--bv-match-background) !important;
+    // background: var(--bv-match-background) !important;
     padding: 6px 14px !important;
     min-width: 260px;
     align-items: center !important;
@@ -372,8 +376,8 @@ const EXTRA_CSS = `
   /* Table tag on the top-right corner */
   .brackets-viewer .match .match-table-tag {
     position: absolute;
-    top: -12px;
-    right: 14px;
+    bottom: -5px;
+    right: 0px;
     padding: 2px 6px;
     border-radius: 5px;
     background: var(--bv-participant-initial-background);
