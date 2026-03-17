@@ -119,6 +119,9 @@ const DARK_CSS = `
     --bv-match-border-width: 1px;
     --bv-opponent-border-radius: 6px;
 
+    /* Overall bracket background */
+    background: radial-gradient(circle at top left, #0b1a2c 0%, #0b1a2c 35%, #040B15 100%);
+
     /* Backgrounds */
     --bv-match-background: #111827;
     --bv-match-border-color: #1f2937;
@@ -126,9 +129,9 @@ const DARK_CSS = `
     --bv-opponent-border-color: #1e3a5f;
 
     /* Text */
-    --bv-opponent-name-color: #e2e8f0;
-    --bv-opponent-score-color: #38bdf8;
-    --bv-match-label-color: #64748b;
+    --bv-opponent-name-color: red;
+    --bv-opponent-score-color: blue;
+    --bv-match-label-color: green;
 
     /* States */
     --bv-win-background: #0c2337;
@@ -239,6 +242,33 @@ const EXTRA_CSS = `
   .brackets-viewer .match[data-disabled="true"] {
     cursor: not-allowed;
     opacity: 0.6;
+    // background-color: red
+  }
+
+  /* Match card styling – compact, pill-like */
+  .brackets-viewer .match {
+    border-radius: var(--bv-match-border-radius);
+    // border-width: var(--bv-match-border-width);
+    // border-style: solid;
+    // border-color: var(--bv-match-border-color);
+    // box-shadow: 0 8px 20px rgba(15, 23, 42, 0.6);
+    // background: var(--bv-match-background);
+    padding: 4px 10px;
+    min-width: 250px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Opponent rows inside a match */
+  .brackets-viewer .match .opponent {
+    border-radius: var(--bv-opponent-border-radius);
+    background: transparent;
+    padding: 4px 6px;
+  }
+
+  /* Slightly tighter vertical spacing between opponents */
+  .brackets-viewer .match .opponents {
+    row-gap: 2px;
   }
 
   /* Status dot */
@@ -253,7 +283,7 @@ const EXTRA_CSS = `
 
   /* Forfeit slot */
   .brackets-viewer .opponent[data-forfeit="true"] .participant-name::after {
-    content: ' (BYE)';
+    content: ' (TBD)';
     opacity: 0.45;
     font-size: 0.8em;
   }
@@ -304,9 +334,9 @@ function MatchPanel({ match, participants, isDark, onClose }: MatchPanelProps) {
         border: `1px solid ${border}`,
         borderRadius: "14px",
         padding: "20px",
-        boxShadow: isDark
-          ? "0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(56,189,248,0.08)"
-          : "0 20px 40px rgba(0,0,0,0.12)",
+        // boxShadow: isDark
+        //   ? "0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(56,189,248,0.08)"
+        //   : "0 20px 40px rgba(0,0,0,0.12)",
         zIndex: 1000,
         fontFamily: "'DM Sans', sans-serif",
         color: text,
@@ -568,7 +598,7 @@ const VIEWER_CONFIGS: Record<
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TournamentTabKey>("single");
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [selectedMatch, setSelectedMatch] =
     useState<BracketsViewerMatch | null>(null);
   const styleTagRef = useRef<HTMLStyleElement | null>(null);
