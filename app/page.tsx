@@ -317,6 +317,23 @@ const EXTRA_CSS = `
     font-size: 0.8em;
   }
 
+  /* Styled initials chip before participant name */
+  .brackets-viewer .participant .name .participant-initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 999px;
+    margin-right: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background: rgba(15, 23, 42, 0.95);
+    color: #e2e8f0;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+  }
+
   .brackets-viewer .bracket .rounds .round {
     align-items: center !important;
     justify-content: center !important;
@@ -716,7 +733,7 @@ export default function Home() {
         },
       );
 
-      // Post-process DOM: add data attributes for styling
+      // Post-process DOM: add data attributes for styling + enhance participants
       setTimeout(() => {
         const container = document.querySelector(cfg.selector);
         if (!container) return;
@@ -745,6 +762,29 @@ export default function Home() {
             `Match #${match.id} · ${STATUS_LABEL[match.status] ?? "Unknown"}`,
           );
         });
+
+        // Replace "#null" prefix with styled player initials based on title attribute
+        container
+          .querySelectorAll<HTMLDivElement>(".participant .name")
+          .forEach((nameEl) => {
+            const span = nameEl.querySelector("span");
+            if (!span) return;
+            const participantEl = nameEl.closest<HTMLElement>(".participant");
+            const fullName =
+              participantEl?.getAttribute("title") ??
+              nameEl.textContent?.replace("#null", "").trim() ??
+              "";
+            if (!fullName) return;
+
+            const parts = fullName.split(/\s+/).filter(Boolean);
+            const initials =
+              parts.length === 1
+                ? parts[0].slice(0, 2)
+                : (parts[0][0] ?? "") + (parts[parts.length - 1][0] ?? "");
+
+            span.textContent = initials.toUpperCase();
+            span.classList.add("participant-initials");
+          });
       }, 150);
     },
     [dataMap],
