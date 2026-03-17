@@ -7,7 +7,7 @@
       "type": "double_elimination",
       "number": 1,
       "settings": {
-        "size": 14,
+        "size": 13,
         "seedOrdering": ["natural"],
         "consolationFinal": false
       }
@@ -89,6 +89,12 @@
     {
       "id": 11,
       "stage_id": 1,
+      "group_id": 1,
+      "number": 6
+    },
+    {
+      "id": 12,
+      "stage_id": 1,
       "group_id": 2,
       "number": 6
     }
@@ -130,7 +136,7 @@
       "status": 2,
       "opponent1": {
         "id": 2,
-        "player_ids": ["0b6cefba-dbe9-4ac4-98b9-533effa821d9"],
+        "player_ids": ["ed5da108-b21a-4580-8a7c-7dc8d3437d21"],
         "score": 0,
         "result": 0,
         "forfeit": false,
@@ -138,7 +144,7 @@
       },
       "opponent2": {
         "id": 3,
-        "player_ids": ["40de1635-37c2-4611-a7fa-dd13614461bf"],
+        "player_ids": ["647a06fc-c9ec-4a51-bd53-6598cce309fa"],
         "score": 0,
         "result": 0,
         "forfeit": false,
@@ -156,7 +162,7 @@
       "status": 2,
       "opponent1": {
         "id": 4,
-        "player_ids": ["ed5da108-b21a-4580-8a7c-7dc8d3437d21"],
+        "player_ids": ["086ab023-3f61-4dfc-848b-b80d0c7e1826"],
         "score": 0,
         "result": 0,
         "forfeit": false,
@@ -164,7 +170,7 @@
       },
       "opponent2": {
         "id": 5,
-        "player_ids": ["647a06fc-c9ec-4a51-bd53-6598cce309fa"],
+        "player_ids": ["40de1635-37c2-4611-a7fa-dd13614461bf"],
         "score": 0,
         "result": 0,
         "forfeit": false,
@@ -179,35 +185,9 @@
       "round_id": 1,
       "number": 4,
       "child_count": 0,
-      "status": 2,
-      "opponent1": {
-        "id": 6,
-        "player_ids": ["b00d6c02-174b-4925-b62b-2905eb1df30f"],
-        "score": 0,
-        "result": 0,
-        "forfeit": false,
-        "position": null
-      },
-      "opponent2": {
-        "id": 7,
-        "player_ids": ["eb2ea39b-e6c0-4556-acea-d27600b13480"],
-        "score": 0,
-        "result": 0,
-        "forfeit": false,
-        "position": null
-      },
-      "_note": null
-    },
-    {
-      "id": 5,
-      "stage_id": 1,
-      "group_id": 1,
-      "round_id": 1,
-      "number": 5,
-      "child_count": 0,
       "status": 0,
       "opponent1": {
-        "id": 8,
+        "id": 6,
         "player_ids": ["f9a55e01-1baf-4670-b3c4-04c94d6dda3b"],
         "score": 0,
         "result": null,
@@ -225,6 +205,32 @@
       "_note": null
     },
     {
+      "id": 5,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 1,
+      "number": 5,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": {
+        "id": 7,
+        "player_ids": ["b00d6c02-174b-4925-b62b-2905eb1df30f"],
+        "score": 0,
+        "result": 0,
+        "forfeit": false,
+        "position": null
+      },
+      "opponent2": {
+        "id": 8,
+        "player_ids": ["eb2ea39b-e6c0-4556-acea-d27600b13480"],
+        "score": 0,
+        "result": 0,
+        "forfeit": false,
+        "position": null
+      },
+      "_note": null
+    },
+    {
       "id": 6,
       "stage_id": 1,
       "group_id": 1,
@@ -234,7 +240,7 @@
       "status": 2,
       "opponent1": {
         "id": 9,
-        "player_ids": ["086ab023-3f61-4dfc-848b-b80d0c7e1826"],
+        "player_ids": ["0b6cefba-dbe9-4ac4-98b9-533effa821d9"],
         "score": 0,
         "result": 0,
         "forfeit": false,
@@ -257,20 +263,20 @@
       "round_id": 1,
       "number": 7,
       "child_count": 0,
-      "status": 2,
+      "status": 0,
       "opponent1": {
         "id": 11,
         "player_ids": ["046f7e71-e6a6-46ea-880d-14c65cfd4eaa"],
         "score": 0,
-        "result": 0,
+        "result": null,
         "forfeit": false,
         "position": null
       },
       "opponent2": {
-        "id": 12,
-        "player_ids": ["00ffa5f9-46c0-46b8-8811-ddb7dc91ba0e"],
-        "score": 0,
-        "result": 0,
+        "id": null,
+        "player_ids": null,
+        "score": null,
+        "result": null,
         "forfeit": false,
         "position": null
       },
@@ -285,7 +291,7 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 13,
+        "id": 12,
         "player_ids": ["ca405c9f-3620-4446-8fe8-9e650bc9d077"],
         "score": 0,
         "result": 0,
@@ -293,7 +299,7 @@
         "position": null
       },
       "opponent2": {
-        "id": 14,
+        "id": 13,
         "player_ids": ["8a61c654-b605-492f-9b1b-d643f861a995"],
         "score": 0,
         "result": 0,
@@ -311,7 +317,7 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 15,
+        "id": 14,
         "player_ids": null,
         "score": null,
         "result": null,
@@ -319,14 +325,14 @@
         "position": null
       },
       "opponent2": {
-        "id": 16,
+        "id": 15,
         "player_ids": null,
         "score": null,
         "result": null,
         "forfeit": false,
         "position": null
       },
-      "_note": "Loser of Match 1 vs Loser of Match 2"
+      "_note": "Loser of Match 1 vs Loser of Match 3"
     },
     {
       "id": 10,
@@ -337,7 +343,7 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 17,
+        "id": 16,
         "player_ids": null,
         "score": null,
         "result": null,
@@ -345,14 +351,14 @@
         "position": null
       },
       "opponent2": {
-        "id": 18,
+        "id": 17,
         "player_ids": null,
         "score": null,
         "result": null,
         "forfeit": false,
         "position": null
       },
-      "_note": "Loser of Match 3 vs Loser of Match 4"
+      "_note": "Loser of Match 4 vs Loser of Match 6"
     },
     {
       "id": 11,
@@ -363,7 +369,7 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 19,
+        "id": 18,
         "player_ids": null,
         "score": null,
         "result": null,
@@ -371,14 +377,14 @@
         "position": null
       },
       "opponent2": {
-        "id": 20,
+        "id": 19,
         "player_ids": null,
         "score": null,
         "result": null,
         "forfeit": false,
         "position": null
       },
-      "_note": "Loser of Match 5 vs Loser of Match 6"
+      "_note": "Loser of Match 2 vs Loser of Match 5"
     },
     {
       "id": 12,
@@ -389,7 +395,7 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 21,
+        "id": 20,
         "player_ids": null,
         "score": null,
         "result": null,
@@ -397,7 +403,7 @@
         "position": null
       },
       "opponent2": {
-        "id": 22,
+        "id": 21,
         "player_ids": null,
         "score": null,
         "result": null,
@@ -415,9 +421,9 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 1,
-        "player_ids": ["2e41cfa3-2283-41d5-8fd3-38ac8e8c5bbf"],
-        "score": 0,
+        "id": 22,
+        "player_ids": null,
+        "score": null,
         "result": null,
         "forfeit": false,
         "position": null
@@ -430,7 +436,7 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 1 vs Winner of Match 2"
+      "_note": "Winner of Match 2 vs Winner of Match 5"
     },
     {
       "id": 14,
@@ -441,9 +447,35 @@
       "child_count": 0,
       "status": 2,
       "opponent1": {
+        "id": 1,
+        "player_ids": ["2e41cfa3-2283-41d5-8fd3-38ac8e8c5bbf"],
+        "score": 0,
+        "result": null,
+        "forfeit": false,
+        "position": null
+      },
+      "opponent2": {
         "id": 24,
         "player_ids": null,
         "score": null,
+        "result": null,
+        "forfeit": false,
+        "position": null
+      },
+      "_note": "Winner of Match 1 vs Winner of Match 3"
+    },
+    {
+      "id": 15,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 3,
+      "number": 15,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": {
+        "id": 11,
+        "player_ids": ["046f7e71-e6a6-46ea-880d-14c65cfd4eaa"],
+        "score": 0,
         "result": null,
         "forfeit": false,
         "position": null
@@ -456,18 +488,18 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 3 vs Winner of Match 4"
+      "_note": "Winner of Match 7 vs Winner of Match 8"
     },
     {
-      "id": 15,
+      "id": 16,
       "stage_id": 1,
       "group_id": 1,
       "round_id": 3,
-      "number": 15,
+      "number": 16,
       "child_count": 0,
       "status": 2,
       "opponent1": {
-        "id": 8,
+        "id": 6,
         "player_ids": ["f9a55e01-1baf-4670-b3c4-04c94d6dda3b"],
         "score": 0,
         "result": null,
@@ -482,14 +514,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 5 vs Winner of Match 6"
+      "_note": "Winner of Match 4 vs Winner of Match 6"
     },
     {
-      "id": 16,
+      "id": 17,
       "stage_id": 1,
-      "group_id": 1,
-      "round_id": 3,
-      "number": 16,
+      "group_id": 2,
+      "round_id": 4,
+      "number": 17,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -508,14 +540,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 7 vs Winner of Match 8"
+      "_note": "Winner of Match 9 vs Loser of Match 14"
     },
     {
-      "id": 17,
+      "id": 18,
       "stage_id": 1,
       "group_id": 2,
       "round_id": 4,
-      "number": 17,
+      "number": 18,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -534,14 +566,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 9 vs Loser of Match 13"
+      "_note": "Winner of Match 10 vs Loser of Match 16"
     },
     {
-      "id": 18,
+      "id": 19,
       "stage_id": 1,
       "group_id": 2,
       "round_id": 4,
-      "number": 18,
+      "number": 19,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -560,14 +592,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 11 vs Loser of Match 15"
+      "_note": "Winner of Match 11 vs Loser of Match 13"
     },
     {
-      "id": 19,
+      "id": 20,
       "stage_id": 1,
       "group_id": 2,
       "round_id": 4,
-      "number": 19,
+      "number": 20,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -586,14 +618,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 10 vs Loser of Match 14"
+      "_note": "Winner of Match 12 vs Loser of Match 15"
     },
     {
-      "id": 20,
+      "id": 21,
       "stage_id": 1,
-      "group_id": 2,
-      "round_id": 4,
-      "number": 20,
+      "group_id": 1,
+      "round_id": 5,
+      "number": 21,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -612,14 +644,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 12 vs Loser of Match 16"
+      "_note": "Winner of Match 15 vs Winner of Match 16"
     },
     {
-      "id": 21,
+      "id": 22,
       "stage_id": 1,
       "group_id": 1,
       "round_id": 5,
-      "number": 21,
+      "number": 22,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -641,11 +673,11 @@
       "_note": "Winner of Match 13 vs Winner of Match 14"
     },
     {
-      "id": 22,
+      "id": 23,
       "stage_id": 1,
-      "group_id": 1,
-      "round_id": 5,
-      "number": 22,
+      "group_id": 2,
+      "round_id": 6,
+      "number": 23,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -664,14 +696,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 15 vs Winner of Match 16"
+      "_note": "Winner of Match 17 vs Winner of Match 19"
     },
     {
-      "id": 23,
+      "id": 24,
       "stage_id": 1,
       "group_id": 2,
       "round_id": 6,
-      "number": 23,
+      "number": 24,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -690,14 +722,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 17 vs Loser of Match 21"
+      "_note": "Winner of Match 18 vs Winner of Match 20"
     },
     {
-      "id": 24,
+      "id": 25,
       "stage_id": 1,
-      "group_id": 2,
-      "round_id": 6,
-      "number": 24,
+      "group_id": 1,
+      "round_id": 7,
+      "number": 25,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -716,14 +748,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 19 vs Loser of Match 22"
+      "_note": "Winner of Match 21 vs Winner of Match 22"
     },
     {
-      "id": 25,
+      "id": 26,
       "stage_id": 1,
       "group_id": 2,
-      "round_id": 6,
-      "number": 25,
+      "round_id": 8,
+      "number": 26,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -742,14 +774,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 18 vs Winner of Match 20"
+      "_note": "Loser of Match 22 vs Winner of Match 23"
     },
     {
-      "id": 26,
+      "id": 27,
       "stage_id": 1,
-      "group_id": 1,
-      "round_id": 7,
-      "number": 26,
+      "group_id": 2,
+      "round_id": 8,
+      "number": 27,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -768,18 +800,70 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 21 vs Winner of Match 22"
+      "_note": "Loser of Match 21 vs Winner of Match 24"
     },
     {
-      "id": 27,
+      "id": 28,
       "stage_id": 1,
       "group_id": 2,
-      "round_id": 8,
-      "number": 27,
+      "round_id": 9,
+      "number": 28,
       "child_count": 0,
       "status": 2,
       "opponent1": {
         "id": 49,
+        "player_ids": null,
+        "score": null,
+        "result": null,
+        "forfeit": false,
+        "position": null
+      },
+      "opponent2": {
+        "id": 50,
+        "player_ids": null,
+        "score": null,
+        "result": null,
+        "forfeit": false,
+        "position": null
+      },
+      "_note": "Winner of Match 26 vs Winner of Match 27"
+    },
+    {
+      "id": 29,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 10,
+      "number": 29,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": {
+        "id": 51,
+        "player_ids": null,
+        "score": null,
+        "result": null,
+        "forfeit": false,
+        "position": null
+      },
+      "opponent2": {
+        "id": 52,
+        "player_ids": null,
+        "score": null,
+        "result": null,
+        "forfeit": false,
+        "position": null
+      },
+      "_note": "Winner of Match 25 vs Winner of Match 31"
+    },
+    {
+      "id": 30,
+      "stage_id": 1,
+      "group_id": 1,
+      "round_id": 11,
+      "number": 30,
+      "child_count": 0,
+      "status": 2,
+      "opponent1": {
+        "id": 53,
         "player_ids": null,
         "score": null,
         "result": null,
@@ -794,66 +878,14 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 23"
+      "_note": "Loser of Match 29"
     },
     {
-      "id": 28,
+      "id": 31,
       "stage_id": 1,
       "group_id": 2,
-      "round_id": 8,
-      "number": 28,
-      "child_count": 0,
-      "status": 2,
-      "opponent1": {
-        "id": 50,
-        "player_ids": null,
-        "score": null,
-        "result": null,
-        "forfeit": false,
-        "position": null
-      },
-      "opponent2": {
-        "id": 51,
-        "player_ids": null,
-        "score": null,
-        "result": null,
-        "forfeit": false,
-        "position": null
-      },
-      "_note": "Winner of Match 24 vs Winner of Match 25"
-    },
-    {
-      "id": 29,
-      "stage_id": 1,
-      "group_id": 2,
-      "round_id": 9,
-      "number": 29,
-      "child_count": 0,
-      "status": 2,
-      "opponent1": {
-        "id": 52,
-        "player_ids": null,
-        "score": null,
-        "result": null,
-        "forfeit": false,
-        "position": null
-      },
-      "opponent2": {
-        "id": 53,
-        "player_ids": null,
-        "score": null,
-        "result": null,
-        "forfeit": false,
-        "position": null
-      },
-      "_note": "Winner of Match 27 vs Winner of Match 28"
-    },
-    {
-      "id": 30,
-      "stage_id": 1,
-      "group_id": 1,
-      "round_id": 10,
-      "number": 30,
+      "round_id": 12,
+      "number": 31,
       "child_count": 0,
       "status": 2,
       "opponent1": {
@@ -872,33 +904,7 @@
         "forfeit": false,
         "position": null
       },
-      "_note": "Winner of Match 26 vs Winner of Match 31"
-    },
-    {
-      "id": 31,
-      "stage_id": 1,
-      "group_id": 2,
-      "round_id": 11,
-      "number": 31,
-      "child_count": 0,
-      "status": 2,
-      "opponent1": {
-        "id": 56,
-        "player_ids": null,
-        "score": null,
-        "result": null,
-        "forfeit": false,
-        "position": null
-      },
-      "opponent2": {
-        "id": 57,
-        "player_ids": null,
-        "score": null,
-        "result": null,
-        "forfeit": false,
-        "position": null
-      },
-      "_note": "Loser of Match 26 vs Winner of Match 29"
+      "_note": "Loser of Match 25 vs Winner of Match 28"
     }
   ],
   "participant": [
@@ -911,49 +917,49 @@
     {
       "id": 2,
       "tournament_id": 1,
-      "name": "Daniel Brown",
+      "name": "Thompson Oliver",
       "image": null
     },
     {
       "id": 3,
       "tournament_id": 1,
-      "name": "James Anderson",
+      "name": "Chris Hemsworth",
       "image": null
     },
     {
       "id": 4,
       "tournament_id": 1,
-      "name": "Thompson Oliver",
+      "name": "Tom Cruise",
       "image": null
     },
     {
       "id": 5,
       "tournament_id": 1,
-      "name": "Chris Hemsworth",
+      "name": "James Anderson",
       "image": null
     },
     {
       "id": 6,
       "tournament_id": 1,
-      "name": "Alice Seven",
+      "name": "Henry zoi",
       "image": null
     },
     {
       "id": 7,
       "tournament_id": 1,
-      "name": "Robert Downney",
+      "name": "Alice Seven",
       "image": null
     },
     {
       "id": 8,
       "tournament_id": 1,
-      "name": "Henry zoi",
+      "name": "Robert Downney",
       "image": null
     },
     {
       "id": 9,
       "tournament_id": 1,
-      "name": "Tom Cruise",
+      "name": "Daniel Brown",
       "image": null
     },
     {
@@ -971,43 +977,43 @@
     {
       "id": 12,
       "tournament_id": 1,
-      "name": "Lenord DiCaprio",
+      "name": "Collins Benjamin",
       "image": null
     },
     {
       "id": 13,
       "tournament_id": 1,
-      "name": "Collins Benjamin",
+      "name": "John doe",
       "image": null
     },
     {
       "id": 14,
       "tournament_id": 1,
-      "name": "John doe",
+      "name": "Loser of Match 1",
       "image": null
     },
     {
       "id": 15,
       "tournament_id": 1,
-      "name": "Loser of Match 1",
+      "name": "Loser of Match 3",
       "image": null
     },
     {
       "id": 16,
       "tournament_id": 1,
-      "name": "Loser of Match 2",
+      "name": "Loser of Match 4",
       "image": null
     },
     {
       "id": 17,
       "tournament_id": 1,
-      "name": "Loser of Match 3",
+      "name": "Loser of Match 6",
       "image": null
     },
     {
       "id": 18,
       "tournament_id": 1,
-      "name": "Loser of Match 4",
+      "name": "Loser of Match 2",
       "image": null
     },
     {
@@ -1019,67 +1025,67 @@
     {
       "id": 20,
       "tournament_id": 1,
-      "name": "Loser of Match 6",
+      "name": "Loser of Match 7",
       "image": null
     },
     {
       "id": 21,
       "tournament_id": 1,
-      "name": "Loser of Match 7",
+      "name": "Loser of Match 8",
       "image": null
     },
     {
       "id": 22,
       "tournament_id": 1,
-      "name": "Loser of Match 8",
+      "name": "Winner of Match 2",
       "image": null
     },
     {
       "id": 23,
       "tournament_id": 1,
-      "name": "Winner of Match 1",
+      "name": "Winner of Match 5",
       "image": null
     },
     {
       "id": 24,
       "tournament_id": 1,
-      "name": "Winner of Match 3",
+      "name": "Winner of Match 1",
       "image": null
     },
     {
       "id": 25,
       "tournament_id": 1,
-      "name": "Winner of Match 4",
+      "name": "Winner of Match 7",
       "image": null
     },
     {
       "id": 26,
       "tournament_id": 1,
-      "name": "Winner of Match 5",
+      "name": "Winner of Match 4",
       "image": null
     },
     {
       "id": 27,
       "tournament_id": 1,
-      "name": "Winner of Match 7",
+      "name": "Winner of Match 9",
       "image": null
     },
     {
       "id": 28,
       "tournament_id": 1,
-      "name": "Winner of Match 8",
+      "name": "Loser of Match 14",
       "image": null
     },
     {
       "id": 29,
       "tournament_id": 1,
-      "name": "Winner of Match 9",
+      "name": "Winner of Match 10",
       "image": null
     },
     {
       "id": 30,
       "tournament_id": 1,
-      "name": "Loser of Match 13",
+      "name": "Loser of Match 16",
       "image": null
     },
     {
@@ -1091,31 +1097,31 @@
     {
       "id": 32,
       "tournament_id": 1,
-      "name": "Loser of Match 15",
+      "name": "Loser of Match 13",
       "image": null
     },
     {
       "id": 33,
       "tournament_id": 1,
-      "name": "Winner of Match 10",
+      "name": "Winner of Match 12",
       "image": null
     },
     {
       "id": 34,
       "tournament_id": 1,
-      "name": "Loser of Match 14",
+      "name": "Loser of Match 15",
       "image": null
     },
     {
       "id": 35,
       "tournament_id": 1,
-      "name": "Winner of Match 12",
+      "name": "Winner of Match 15",
       "image": null
     },
     {
       "id": 36,
       "tournament_id": 1,
-      "name": "Loser of Match 16",
+      "name": "Winner of Match 16",
       "image": null
     },
     {
@@ -1133,73 +1139,73 @@
     {
       "id": 39,
       "tournament_id": 1,
-      "name": "Winner of Match 15",
+      "name": "Winner of Match 17",
       "image": null
     },
     {
       "id": 40,
       "tournament_id": 1,
-      "name": "Winner of Match 16",
+      "name": "Winner of Match 19",
       "image": null
     },
     {
       "id": 41,
       "tournament_id": 1,
-      "name": "Winner of Match 17",
+      "name": "Winner of Match 18",
       "image": null
     },
     {
       "id": 42,
       "tournament_id": 1,
-      "name": "Loser of Match 21",
+      "name": "Winner of Match 20",
       "image": null
     },
     {
       "id": 43,
       "tournament_id": 1,
-      "name": "Winner of Match 19",
+      "name": "Winner of Match 21",
       "image": null
     },
     {
       "id": 44,
       "tournament_id": 1,
-      "name": "Loser of Match 22",
+      "name": "Winner of Match 22",
       "image": null
     },
     {
       "id": 45,
       "tournament_id": 1,
-      "name": "Winner of Match 18",
+      "name": "Loser of Match 22",
       "image": null
     },
     {
       "id": 46,
       "tournament_id": 1,
-      "name": "Winner of Match 20",
+      "name": "Winner of Match 23",
       "image": null
     },
     {
       "id": 47,
       "tournament_id": 1,
-      "name": "Winner of Match 21",
+      "name": "Loser of Match 21",
       "image": null
     },
     {
       "id": 48,
       "tournament_id": 1,
-      "name": "Winner of Match 22",
+      "name": "Winner of Match 24",
       "image": null
     },
     {
       "id": 49,
       "tournament_id": 1,
-      "name": "Winner of Match 23",
+      "name": "Winner of Match 26",
       "image": null
     },
     {
       "id": 50,
       "tournament_id": 1,
-      "name": "Winner of Match 24",
+      "name": "Winner of Match 27",
       "image": null
     },
     {
@@ -1211,37 +1217,25 @@
     {
       "id": 52,
       "tournament_id": 1,
-      "name": "Winner of Match 27",
+      "name": "Winner of Match 31",
       "image": null
     },
     {
       "id": 53,
       "tournament_id": 1,
-      "name": "Winner of Match 28",
+      "name": "Loser of Match 29",
       "image": null
     },
     {
       "id": 54,
       "tournament_id": 1,
-      "name": "Winner of Match 26",
+      "name": "Loser of Match 25",
       "image": null
     },
     {
       "id": 55,
       "tournament_id": 1,
-      "name": "Winner of Match 31",
-      "image": null
-    },
-    {
-      "id": 56,
-      "tournament_id": 1,
-      "name": "Loser of Match 26",
-      "image": null
-    },
-    {
-      "id": 57,
-      "tournament_id": 1,
-      "name": "Winner of Match 29",
+      "name": "Winner of Match 28",
       "image": null
     }
   ]

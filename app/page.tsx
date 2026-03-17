@@ -118,6 +118,8 @@ const DARK_CSS = `
     --bv-match-border-radius: 10px;
     --bv-match-border-width: 1px;
     --bv-opponent-border-radius: 8px;
+    --bv-match-number-background: #0f172a;
+    --bv-match-number-color: #e2e8f0;
 
     /* Overall bracket background */
     background: radial-gradient(circle at top left, #020617 0%, #020617 35%, #020617 100%);
@@ -201,6 +203,8 @@ const LIGHT_CSS = `
     --bv-match-border-radius: 8px;
     --bv-match-border-width: 1px;
     --bv-opponent-border-radius: 6px;
+    --bv-match-number-background: #f8fafc;
+    --bv-match-number-color: #0A1A2C;
 
     --bv-match-background: #ffffff;
     --bv-match-border-color: #e2e8f0;
@@ -288,6 +292,7 @@ const EXTRA_CSS = `
     min-width: 260px;
     align-items: center !important;
     justify-content: center !important;
+    position: relative;
   }
 
   /* Opponent rows inside a match */
@@ -329,6 +334,43 @@ const EXTRA_CSS = `
   /* Slightly tighter vertical spacing between opponents */
   .brackets-viewer .match .opponents {
     row-gap: 2px;
+  }
+
+  /* Match number badge on the left edge */
+  .brackets-viewer .match .match-number-badge {
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--bv-match-number-background);
+    color: var(--bv-match-number-color);
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bv-match-border-color);
+    z-index: 1;
+  }
+
+  /* Table tag on the top-right corner */
+  .brackets-viewer .match .match-table-tag {
+    position: absolute;
+    top: -10px;
+    right: 6px;
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #e5e7eb;
+    font-size: 9px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    white-space: nowrap;
   }
 
   /* Status dot */
@@ -793,6 +835,31 @@ export default function Home() {
             "title",
             `Match #${match.id} · ${STATUS_LABEL[match.status] ?? "Unknown"}`,
           );
+
+          // Inject / update match number badge on left edge
+          const numClass = "match-number-badge";
+          let numBadge = el.querySelector<HTMLDivElement>(`.${numClass}`);
+          if (!numBadge) {
+            numBadge = document.createElement("div");
+            numBadge.className = numClass;
+            el.prepend(numBadge);
+          }
+          numBadge.textContent = String(match.number);
+
+          // Inject / update table tag on top-right corner
+          const tableClass = "match-table-tag";
+          let tableTag = el.querySelector<HTMLDivElement>(`.${tableClass}`);
+          if (!tableTag) {
+            tableTag = document.createElement("div");
+            tableTag.className = tableClass;
+            el.appendChild(tableTag);
+          }
+          const tableValue =
+            (match as any).table ?? (match as any).assignedTable;
+          tableTag.textContent =
+            tableValue != null && tableValue !== ""
+              ? `Table ${tableValue}`
+              : "";
           // Mark winner / loser participants for completed matches:
           // infer completion from scores / numeric results as well as status.
           const winnerIds = new Set<number>();
