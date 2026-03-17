@@ -27,6 +27,8 @@ type BracketsViewerMatchOpponent = {
   winningCondition?: string;
 };
 type BracketsViewerMatch = {
+  table?: number;
+  assignedTable?: number;
   id: number;
   number: number;
   stage_id: number;
@@ -339,14 +341,14 @@ const EXTRA_CSS = `
   /* Match number badge on the left edge */
   .brackets-viewer .match .match-number-badge {
     position: absolute;
-    left: -2px;
+    left: -3px;
     top: 50%;
     transform: translateY(-50%);
     width: 18px;
     height: 30px;
     border-radius: 5px;
-    background: var(--bv-match-number-background);
-    color: var(--bv-match-number-color);
+    background: var(--bv-participant-initial-background);
+    color: var(--bv-participant-initial-color);
     font-size: 11px;
     font-family: 'DM Mono', monospace;
     display: flex;
@@ -359,12 +361,12 @@ const EXTRA_CSS = `
   /* Table tag on the top-right corner */
   .brackets-viewer .match .match-table-tag {
     position: absolute;
-    top: -10px;
-    right: 6px;
+    top: -12px;
+    right: 14px;
     padding: 2px 6px;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.95);
-    color: #e5e7eb;
+    border-radius: 5px;
+    background: var(--bv-participant-initial-background);
+    color: var(--bv-participant-initial-color);
     font-size: 9px;
     font-family: 'DM Mono', monospace;
     letter-spacing: 0.06em;
@@ -855,11 +857,18 @@ export default function Home() {
             el.appendChild(tableTag);
           }
           const tableValue =
-            (match as any).table ?? (match as any).assignedTable;
-          tableTag.textContent =
-            tableValue != null && tableValue !== ""
-              ? `Table ${tableValue}`
-              : "";
+            (match as BracketsViewerMatch).table ??
+            (match as BracketsViewerMatch).assignedTable;
+
+          if (match.status === 3) {
+            tableTag.textContent =
+              tableValue != null ? `Table ${tableValue}` : "Table - ";
+          } else {
+            tableTag.textContent = null;
+            tableTag.style.display = "none";
+          }
+
+          console.log(match.status);
           // Mark winner / loser participants for completed matches:
           // infer completion from scores / numeric results as well as status.
           const winnerIds = new Set<number>();
