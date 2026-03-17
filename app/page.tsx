@@ -329,7 +329,6 @@ const EXTRA_CSS = `
 
   .brackets-viewer .match[data-status="2"] .opponents {
     border-color: var(--bv-match-border-color) !important;
-    opacity: 0.8;
   }
 
   /* Winner / loser emphasis for completed matches */
@@ -930,12 +929,17 @@ export default function Home() {
           }
         });
 
-        // Replace "#null" prefix with styled player initials based on title attribute
+        // Replace "#null" (or prepend) with styled player initials based on title attribute
         container
           .querySelectorAll<HTMLDivElement>(".participant .name")
           .forEach((nameEl) => {
-            const span = nameEl.querySelector("span");
-            if (!span) return;
+            let span = nameEl.querySelector("span");
+            // Some layouts (round robin / pool / swiss) may not have the leading span.
+            // In that case, create one and prepend it.
+            if (!span) {
+              span = document.createElement("span");
+              nameEl.prepend(span);
+            }
             const participantEl = nameEl.closest<HTMLElement>(".participant");
             const fullName =
               participantEl?.getAttribute("title") ??
