@@ -141,7 +141,7 @@ const DARK_CSS = `
     --border-hover-color: #38bdf8;
     --border-selected-color: #38bdf8;
     --text-size: 12px;
-    --round-margin: 40px;
+    --round-margin: 10px;
     --match-width: 170px;
     --match-horizontal-padding: 8px;
     --match-vertical-padding: 6px;
@@ -294,22 +294,26 @@ const EXTRA_CSS = `
 
   /* ── Grouped stages layout tweaks (Pool / Round Robin / Swiss) ───────────── */
 
-  /* Container for grouped stages */
+  /* Container for grouped stages: lay groups out horizontally */
   #round-robin-viewer .round-robin,
   #pool-viewer .round-robin,
   #swiss-viewer .round-robin {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap !important; /* keep all groups on a single horizontal line */
+    align-items: flex-start;
     gap: 32px;
+    padding: 8px 4px 16px;
   }
 
-  /* Each group stacks: header, table, then rounds */
+  /* Each group is a vertical card: header, table, then rounds */
   #round-robin-viewer .round-robin .group,
   #pool-viewer .round-robin .group,
   #swiss-viewer .round-robin .group {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 0 0 420px; /* fixed-ish width so groups form a neat row */
   }
 
   /* Ensure group title centered */
