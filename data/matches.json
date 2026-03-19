@@ -356,13 +356,16 @@
       {
         "id": 1,
         "tournament_id": 1,
-        "name": "Double Elimination",
+        "name": "Bracket",
         "type": "double_elimination",
         "number": 1,
         "settings": {
           "size": 16,
           "seedOrdering": ["natural"],
-          "grandFinal": "simple"
+          "grandFinal": "double",
+          "consolationFinal": false,
+          "groupCount": null,
+          "roundRobinMode": null
         }
       }
     ],
@@ -384,25 +387,83 @@
       }
     ],
     "round": [
-      { "id": 1, "stage_id": 1, "group_id": 1, "number": 1 },
-      { "id": 2, "stage_id": 1, "group_id": 1, "number": 2 },
-      { "id": 3, "stage_id": 1, "group_id": 1, "number": 3 },
-      { "id": 4, "stage_id": 1, "group_id": 1, "number": 4 },
-      { "id": 5, "stage_id": 1, "group_id": 2, "number": 1 },
-      { "id": 6, "stage_id": 1, "group_id": 2, "number": 2 },
-      { "id": 7, "stage_id": 1, "group_id": 2, "number": 3 },
-      { "id": 8, "stage_id": 1, "group_id": 2, "number": 4 },
-      { "id": 9, "stage_id": 1, "group_id": 2, "number": 5 },
-      { "id": 10, "stage_id": 1, "group_id": 2, "number": 6 },
-      { "id": 11, "stage_id": 1, "group_id": 3, "number": 1 }
+      {
+        "id": 1,
+        "stage_id": 1,
+        "group_id": 1,
+        "number": 1
+      },
+      {
+        "id": 2,
+        "stage_id": 1,
+        "group_id": 2,
+        "number": 1
+      },
+      {
+        "id": 3,
+        "stage_id": 1,
+        "group_id": 1,
+        "number": 2
+      },
+      {
+        "id": 4,
+        "stage_id": 1,
+        "group_id": 2,
+        "number": 2
+      },
+      {
+        "id": 5,
+        "stage_id": 1,
+        "group_id": 1,
+        "number": 3
+      },
+      {
+        "id": 6,
+        "stage_id": 1,
+        "group_id": 2,
+        "number": 3
+      },
+      {
+        "id": 7,
+        "stage_id": 1,
+        "group_id": 1,
+        "number": 4
+      },
+      {
+        "id": 8,
+        "stage_id": 1,
+        "group_id": 2,
+        "number": 4
+      },
+      {
+        "id": 9,
+        "stage_id": 1,
+        "group_id": 2,
+        "number": 5
+      },
+      {
+        "id": 10,
+        "stage_id": 1,
+        "group_id": 2,
+        "number": 6
+      },
+      {
+        "id": 11,
+        "stage_id": 1,
+        "group_id": 3,
+        "number": 1
+      },
+      {
+        "id": 12,
+        "stage_id": 1,
+        "group_id": 3,
+        "number": 2
+      }
     ],
     "match": [
       {
-        "_comment": "=== WINNERS BRACKET (group_id: 1) ===",
-        "_comment2": "--- WB Round 1 (round_id: 1) - 8 matches ---"
-      },
-      {
         "id": 1,
+        "matchNumber": 1,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -411,21 +472,39 @@
         "status": 1,
         "opponent1": {
           "id": 1,
-          "score": null,
+          "player_ids": ["2e41cfa3-2283-41d5-8fd3-38ac8e8c5bbf"],
+          "score": 0,
           "result": null,
-          "forfeit": false
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": null,
+          "player_ids": null,
           "score": null,
           "result": null,
           "forfeit": true,
-          "position": 2
+          "position": null
         },
-        "_note": "WALK_OVER: Samuel Harris gets bye. opponent2 is TBD/NO_PARTY → forfeit:true, id:null"
+        "_note": "BYE: Samuel Harris auto-advances (seed 1)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 2,
+        "matchNumber": 2,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -434,18 +513,39 @@
         "status": 2,
         "opponent1": {
           "id": 2,
-          "score": null,
-          "result": null
+          "player_ids": ["40de1635-37c2-4611-a7fa-dd13614461bf"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": 3,
-          "score": null,
-          "result": null
+          "player_ids": ["49304f79-b1ea-4c4e-846c-4fe5e2c31c3d"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Daniel Brown vs James Anderson"
+        "_note": "James Anderson vs Freeman Deep",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 3,
+        "matchNumber": 3,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -454,18 +554,39 @@
         "status": 2,
         "opponent1": {
           "id": 4,
-          "score": null,
-          "result": null
+          "player_ids": ["ed5da108-b21a-4580-8a7c-7dc8d3437d21"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": 5,
-          "score": null,
-          "result": null
+          "player_ids": ["647a06fc-c9ec-4a51-bd53-6598cce309fa"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Thompson Oliver vs Chris Hemsworth"
+        "_note": "Thompson Oliver vs Chris Hemsworth",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 4,
+        "matchNumber": 4,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -474,18 +595,39 @@
         "status": 2,
         "opponent1": {
           "id": 6,
-          "score": null,
-          "result": null
+          "player_ids": ["b00d6c02-174b-4925-b62b-2905eb1df30f"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": 7,
-          "score": null,
-          "result": null
+          "player_ids": ["eb2ea39b-e6c0-4556-acea-d27600b13480"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Alice Seven vs Robert Downney"
+        "_note": "Alice Seven vs Robert Downney",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 5,
+        "matchNumber": 5,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -494,21 +636,39 @@
         "status": 1,
         "opponent1": {
           "id": 8,
-          "score": null,
+          "player_ids": ["f9a55e01-1baf-4670-b3c4-04c94d6dda3b"],
+          "score": 0,
           "result": null,
-          "forfeit": false
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": null,
+          "player_ids": null,
           "score": null,
           "result": null,
           "forfeit": true,
-          "position": 2
+          "position": null
         },
-        "_note": "WALK_OVER: Henry Zoi gets bye. opponent2 is TBD/NO_PARTY → forfeit:true, id:null"
+        "_note": "BYE: Henry Zoi auto-advances (seed 5)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 6,
+        "matchNumber": 6,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -517,38 +677,80 @@
         "status": 2,
         "opponent1": {
           "id": 9,
-          "score": null,
-          "result": null
+          "player_ids": ["ca405c9f-3620-4446-8fe8-9e650bc9d077"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": 10,
-          "score": null,
-          "result": null
+          "player_ids": ["086ab023-3f61-4dfc-848b-b80d0c7e1826"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Tom Cruise vs Freeman Deep"
+        "_note": "Collins Benjamin vs Tom Cruise",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 7,
+        "matchNumber": 7,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
         "number": 7,
         "child_count": 0,
-        "status": 2,
+        "status": 1,
         "opponent1": {
           "id": 11,
-          "score": null,
-          "result": null
+          "player_ids": ["046f7e71-e6a6-46ea-880d-14c65cfd4eaa"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": 12,
+          "id": null,
+          "player_ids": null,
           "score": null,
-          "result": null
+          "result": null,
+          "forfeit": true,
+          "position": null
         },
-        "_note": "Morgan Johnny vs Lenord DiCaprio"
+        "_note": "BYE: Morgan Johnny auto-advances (seed 9)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 8,
+        "matchNumber": 8,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 1,
@@ -556,483 +758,1468 @@
         "child_count": 0,
         "status": 2,
         "opponent1": {
+          "id": 12,
+          "player_ids": ["0b6cefba-dbe9-4ac4-98b9-533effa821d9"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
           "id": 13,
-          "score": null,
-          "result": null
+          "player_ids": ["8a61c654-b605-492f-9b1b-d643f861a995"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "opponent2": {
-          "id": 14,
-          "score": null,
-          "result": null
-        },
-        "_note": "Collins Benjamin vs John Doe"
-      },
-      {
-        "_comment": "--- WB Round 2 (round_id: 2) - 4 matches ---"
-      },
-      {
-        "id": 9,
-        "stage_id": 1,
-        "group_id": 1,
-        "round_id": 2,
-        "number": 1,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 1
-        },
-        "opponent2": {
-          "id": null,
-          "position": 2
-        },
-        "_note": "Winner of M1 vs Winner of M2"
-      },
-      {
-        "id": 10,
-        "stage_id": 1,
-        "group_id": 1,
-        "round_id": 2,
-        "number": 2,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 3
-        },
-        "opponent2": {
-          "id": null,
-          "position": 4
-        },
-        "_note": "Winner of M3 vs Winner of M4"
-      },
-      {
-        "id": 11,
-        "stage_id": 1,
-        "group_id": 1,
-        "round_id": 2,
-        "number": 3,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 5
-        },
-        "opponent2": {
-          "id": null,
-          "position": 6
-        },
-        "_note": "Winner of M5 vs Winner of M6"
-      },
-      {
-        "id": 12,
-        "stage_id": 1,
-        "group_id": 1,
-        "round_id": 2,
-        "number": 4,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 7
-        },
-        "opponent2": {
-          "id": null,
-          "position": 8
-        },
-        "_note": "Winner of M7 vs Winner of M8"
-      },
-      {
-        "_comment": "--- WB Round 3 / Semi-Finals (round_id: 3) - 2 matches ---"
+        "_note": "Daniel Brown vs John Doe",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "5da658be-6a68-454b-a114-fbb55b524ba2",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 13,
+        "matchNumber": 9,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 3,
         "number": 1,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 1
+          "id": 19,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 2
+          "id": 20,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of M9 vs Winner of M10"
+        "_note": "Winner of M3 vs Winner of M4",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "825ccabb-8a61-4ce2-91aa-11bfb7b49831",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 14,
+        "matchNumber": 10,
         "stage_id": 1,
         "group_id": 1,
         "round_id": 3,
         "number": 2,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 3
+          "id": 1,
+          "player_ids": ["2e41cfa3-2283-41d5-8fd3-38ac8e8c5bbf"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 4
+          "id": 21,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of M11 vs Winner of M12"
-      },
-      {
-        "_comment": "--- WB Final (round_id: 4) - 1 match ---"
+        "_note": "Samuel Harris vs Winner of M2",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "825ccabb-8a61-4ce2-91aa-11bfb7b49831",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 15,
+        "matchNumber": 11,
         "stage_id": 1,
         "group_id": 1,
-        "round_id": 4,
-        "number": 1,
+        "round_id": 3,
+        "number": 3,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 1
+          "id": 11,
+          "player_ids": ["046f7e71-e6a6-46ea-880d-14c65cfd4eaa"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 2
+          "id": 22,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of M13 vs Winner of M14 — raceToFrames: 3 (as per your data)"
-      },
-      {
-        "_comment": "=== LOSERS BRACKET (group_id: 2) ==="
-      },
-      {
-        "_comment": "--- LB Round 1 (round_id: 5) - 4 matches (WB R1 losers) ---"
+        "_note": "Morgan Johnny vs Winner of M8",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "825ccabb-8a61-4ce2-91aa-11bfb7b49831",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 16,
+        "matchNumber": 12,
         "stage_id": 1,
-        "group_id": 2,
-        "round_id": 5,
-        "number": 1,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 1
-        },
-        "opponent2": {
-          "id": null,
-          "position": 2
-        },
-        "_note": "Loser of M1 vs Loser of M2 (your: 76facc3a)"
-      },
-      {
-        "id": 17,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 5,
-        "number": 2,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 3
-        },
-        "opponent2": {
-          "id": null,
-          "position": 4
-        },
-        "_note": "Loser of M3 vs Loser of M4 (your: e2b7de43)"
-      },
-      {
-        "id": 18,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 5,
-        "number": 3,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 5
-        },
-        "opponent2": {
-          "id": null,
-          "position": 6
-        },
-        "_note": "Loser of M5 vs Loser of M6 (your: 3b65acc6)"
-      },
-      {
-        "id": 19,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 5,
+        "group_id": 1,
+        "round_id": 3,
         "number": 4,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 7
+          "id": 8,
+          "player_ids": ["f9a55e01-1baf-4670-b3c4-04c94d6dda3b"],
+          "score": 0,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 8
+          "id": 23,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Loser of M7 vs Loser of M8 (your: 90c55e2d)"
-      },
-      {
-        "_comment": "--- LB Round 2 (round_id: 6) - 4 matches (LB R1 winners vs WB R2 losers) ---"
-      },
-      {
-        "id": 20,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 6,
-        "number": 1,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 1
-        },
-        "opponent2": {
-          "id": null,
-          "position": 2
-        },
-        "_note": "Winner of LB-M1 vs Loser of WB-M9 (your: 183c4051)"
+        "_note": "Henry Zoi vs Winner of M6",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "825ccabb-8a61-4ce2-91aa-11bfb7b49831",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 21,
+        "matchNumber": 13,
         "stage_id": 1,
-        "group_id": 2,
-        "round_id": 6,
-        "number": 2,
+        "group_id": 1,
+        "round_id": 5,
+        "number": 1,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 3
+          "id": 32,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 4
+          "id": 33,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of LB-M2 vs Loser of WB-M10 (your: 6fdee7f5)"
+        "_note": "Winner of M13 vs Winner of M14",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "d3f23de8-c41f-4043-9828-8e61b28e3d1b",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 22,
+        "matchNumber": 14,
         "stage_id": 1,
-        "group_id": 2,
-        "round_id": 6,
-        "number": 3,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 5
-        },
-        "opponent2": {
-          "id": null,
-          "position": 6
-        },
-        "_note": "Winner of LB-M3 vs Loser of WB-M11 (your: 2baf93e7)"
-      },
-      {
-        "id": 23,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 6,
-        "number": 4,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 7
-        },
-        "opponent2": {
-          "id": null,
-          "position": 8
-        },
-        "_note": "Winner of LB-M4 vs Loser of WB-M12 (your: 7b4b6319)"
-      },
-      {
-        "_comment": "--- LB Round 3 (round_id: 7) - 2 matches ---"
-      },
-      {
-        "id": 24,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 7,
-        "number": 1,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 1
-        },
-        "opponent2": {
-          "id": null,
-          "position": 2
-        },
-        "_note": "Winner of LB-M5 vs Winner of LB-M6 (your: 04a217d6)"
-      },
-      {
-        "id": 25,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 7,
+        "group_id": 1,
+        "round_id": 5,
         "number": 2,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 3
+          "id": 34,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 4
+          "id": 35,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of LB-M7 vs Winner of LB-M8 (your: f62428b7)"
-      },
-      {
-        "_comment": "--- LB Round 4 (round_id: 8) - 2 matches (LB R3 winners vs WB R3 losers) ---"
+        "_note": "Winner of M15 vs Winner of M16",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "d3f23de8-c41f-4043-9828-8e61b28e3d1b",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 26,
+        "matchNumber": 15,
+        "stage_id": 1,
+        "group_id": 1,
+        "round_id": 7,
+        "number": 1,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 42,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 43,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M21 vs Winner of M22",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "3bc6bf4d-ecbe-4b33-85d4-40096f1127d2",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 9,
+        "matchNumber": 16,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 2,
+        "number": 1,
+        "child_count": 0,
+        "status": 1,
+        "opponent1": {
+          "id": 14,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": null,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": true,
+          "position": null
+        },
+        "_note": "Loser of M2 — auto-advances (no opponent from M1 bye)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "cf54a470-e754-4844-8e26-8b1b75225563",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 10,
+        "matchNumber": 17,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 2,
+        "number": 2,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 15,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 16,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Loser of M3 vs Loser of M4",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "cf54a470-e754-4844-8e26-8b1b75225563",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 11,
+        "matchNumber": 18,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 2,
+        "number": 3,
+        "child_count": 0,
+        "status": 1,
+        "opponent1": {
+          "id": 17,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": null,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": true,
+          "position": null
+        },
+        "_note": "Loser of M6 — auto-advances (no opponent from M5 bye)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "cf54a470-e754-4844-8e26-8b1b75225563",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 12,
+        "matchNumber": 19,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 2,
+        "number": 4,
+        "child_count": 0,
+        "status": 1,
+        "opponent1": {
+          "id": 18,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": null,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": true,
+          "position": null
+        },
+        "_note": "Loser of M8 — auto-advances (no opponent from M7 bye)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "cf54a470-e754-4844-8e26-8b1b75225563",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 17,
+        "matchNumber": 20,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 4,
+        "number": 1,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 24,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 25,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M9 vs Loser of M14",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "51fb1eba-a291-4e5e-ac9c-5f33a27ca8dc",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 18,
+        "matchNumber": 21,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 4,
+        "number": 2,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 26,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 27,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M10 vs Loser of M13",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "51fb1eba-a291-4e5e-ac9c-5f33a27ca8dc",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 19,
+        "matchNumber": 22,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 4,
+        "number": 3,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 28,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 29,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M11 vs Loser of M16",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "51fb1eba-a291-4e5e-ac9c-5f33a27ca8dc",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 20,
+        "matchNumber": 23,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 4,
+        "number": 4,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 30,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 31,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M12 vs Loser of M15",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "51fb1eba-a291-4e5e-ac9c-5f33a27ca8dc",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 23,
+        "matchNumber": 24,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 6,
+        "number": 1,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 36,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 37,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M17 vs Loser of M21",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "b6c42887-74db-4134-93d2-c4173fb6cc83",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 24,
+        "matchNumber": 25,
+        "stage_id": 1,
+        "group_id": 2,
+        "round_id": 6,
+        "number": 2,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 38,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 39,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "Winner of M18 vs Loser of M22",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "b6c42887-74db-4134-93d2-c4173fb6cc83",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 27,
+        "matchNumber": 26,
         "stage_id": 1,
         "group_id": 2,
         "round_id": 8,
         "number": 1,
         "child_count": 0,
-        "status": 0,
+        "status": 1,
         "opponent1": {
-          "id": null,
-          "position": 1
+          "id": 44,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
           "id": null,
-          "position": 2
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": true,
+          "position": null
         },
-        "_note": "Winner of LB-M9 vs Loser of WB-M13 (your: 73775432)"
+        "_note": "Winner of M23 — auto-advances (bye partner, odd LB R4 slot)",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "a11b788c-1863-47b4-b2b5-ffd9c7193bc9",
+        "matchStatusId": "35eb389a-56bf-4e02-829f-07795da767a9",
+        "matchStatusCode": "CANCELLED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": "2026-03-19T08:42:50.802899",
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
-        "id": 27,
+        "id": 28,
+        "matchNumber": 27,
         "stage_id": 1,
         "group_id": 2,
         "round_id": 8,
         "number": 2,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 3
+          "id": 45,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 4
+          "id": 46,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of LB-M10 vs Winner of LB-M11 (your: 556decfe)"
+        "_note": "Winner of M24 vs Winner of M25",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "a11b788c-1863-47b4-b2b5-ffd9c7193bc9",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
-        "_comment": "--- LB Round 5 (round_id: 9) - 1 match (LB Semi-Final) ---"
-      },
-      {
-        "id": 28,
+        "id": 29,
+        "matchNumber": 28,
         "stage_id": 1,
         "group_id": 2,
         "round_id": 9,
         "number": 1,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 1
+          "id": 47,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 2
+          "id": 48,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of LB-M12 vs Winner of LB-M13 (your: f2a1c1ba)"
+        "_note": "Winner of M27 vs Winner of M28",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "56a4e5e6-f48f-472a-86b9-ae3a312aec0a",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
-        "_comment": "--- LB Round 6 (round_id: 10) - 1 match (LB Final vs WB Final loser) ---"
-      },
-      {
-        "id": 29,
+        "id": 31,
+        "matchNumber": 29,
         "stage_id": 1,
         "group_id": 2,
         "round_id": 10,
         "number": 1,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 1
+          "id": 51,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 2
+          "id": 52,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "Winner of LB-M14 vs Loser of WB Final (your: 03406c7a)"
-      },
-      {
-        "_comment": "--- LB Round 7 (round_id: 11) - Grand Final qualifier from LB ---"
+        "_note": "Loser of M26 vs Winner of M29",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "d18ee547-07b8-4ab5-9480-d1099b91a71d",
+        "roundGuid": "9cb2df34-2baf-47f6-80fa-050a8474056f",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 2,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       },
       {
         "id": 30,
-        "stage_id": 1,
-        "group_id": 2,
-        "round_id": 11,
-        "number": 1,
-        "child_count": 0,
-        "status": 0,
-        "opponent1": {
-          "id": null,
-          "position": 1
-        },
-        "opponent2": {
-          "id": null,
-          "position": 2
-        },
-        "_note": "Winner of LB-M15 vs Loser of WB-M15 (your: e1840c7c)"
-      },
-      {
-        "_comment": "=== GRAND FINAL (group_id: 3) ==="
-      },
-      {
-        "id": 31,
+        "matchNumber": 30,
         "stage_id": 1,
         "group_id": 3,
         "round_id": 11,
         "number": 1,
         "child_count": 0,
-        "status": 0,
+        "status": 2,
         "opponent1": {
-          "id": null,
-          "position": 1
+          "id": 49,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
         "opponent2": {
-          "id": null,
-          "position": 2
+          "id": 50,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
         },
-        "_note": "WB Champion vs LB Champion — Grand Final"
+        "_note": "WB Champion (W(M26)) vs LB Champion (W(M31))",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "36e06e13-2d7d-41ad-9a23-3e648514fc1f",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 3,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
+      },
+      {
+        "id": 32,
+        "matchNumber": 31,
+        "stage_id": 1,
+        "group_id": 3,
+        "round_id": 12,
+        "number": 1,
+        "child_count": 0,
+        "status": 2,
+        "opponent1": {
+          "id": 53,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "opponent2": {
+          "id": 54,
+          "player_ids": null,
+          "score": null,
+          "result": null,
+          "forfeit": false,
+          "position": null
+        },
+        "_note": "GF Reset — played if LB Champion wins M30",
+        "eventId": "e79bd76b-ecb8-4e94-be26-3f92f1ffb8ae",
+        "bracketId": "6cd996da-421f-48a0-b7a4-bcff572eb925",
+        "roundGuid": "7f1a2b3c-4d5e-6f7a-8b9c-0d1e2f3a4b5c",
+        "matchStatusId": "139db2b8-cc36-493e-ad5e-e949d8887e69",
+        "matchStatusCode": "SCHEDULED",
+        "scheduledStart": "2026-03-19T13:45:42.68",
+        "actualStart": null,
+        "actualEnd": null,
+        "operatorId": "44c48005-70bb-415f-8996-f4a78091c7e9",
+        "operatorName": null,
+        "tableNumber": null,
+        "winConditionValue": 3,
+        "winningConditionTypeId": "7e616477-f4cb-4d4f-b1e3-5a491580dc03",
+        "winningConditionTypeName": "Highest Score"
       }
     ],
     "participant": [
-      { "id": 1, "tournament_id": 1, "name": "Samuel Harris" },
-      { "id": 2, "tournament_id": 1, "name": "Daniel Brown" },
-      { "id": 3, "tournament_id": 1, "name": "James Anderson" },
-      { "id": 4, "tournament_id": 1, "name": "Thompson Oliver" },
-      { "id": 5, "tournament_id": 1, "name": "Chris Hemsworth" },
-      { "id": 6, "tournament_id": 1, "name": "Alice Seven" },
-      { "id": 7, "tournament_id": 1, "name": "Robert Downney" },
-      { "id": 8, "tournament_id": 1, "name": "Henry Zoi" },
-      { "id": 9, "tournament_id": 1, "name": "Tom Cruise" },
-      { "id": 10, "tournament_id": 1, "name": "Freeman Deep" },
-      { "id": 11, "tournament_id": 1, "name": "Morgan Johnny" },
-      { "id": 12, "tournament_id": 1, "name": "Lenord DiCaprio" },
-      { "id": 13, "tournament_id": 1, "name": "Collins Benjamin" },
-      { "id": 14, "tournament_id": 1, "name": "John Doe" }
+      {
+        "id": 1,
+        "tournament_id": 1,
+        "name": "Samuel Harris",
+        "image": null,
+        "memberCode": "EEAV7Z",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 2,
+        "tournament_id": 1,
+        "name": "James Anderson",
+        "image": null,
+        "memberCode": "LXDMAK",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 3,
+        "tournament_id": 1,
+        "name": "Freeman Deep",
+        "image": null,
+        "memberCode": "1Z4KKO",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 4,
+        "tournament_id": 1,
+        "name": "Thompson Oliver",
+        "image": null,
+        "memberCode": "KYOT2Y",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 5,
+        "tournament_id": 1,
+        "name": "Chris Hemsworth",
+        "image": null,
+        "memberCode": "ND2E8T",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 6,
+        "tournament_id": 1,
+        "name": "Alice Seven",
+        "image": null,
+        "memberCode": "GWKRD6",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 7,
+        "tournament_id": 1,
+        "name": "Robert Downney",
+        "image": null,
+        "memberCode": "HNPKL9",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 8,
+        "tournament_id": 1,
+        "name": "Henry zoi",
+        "image": null,
+        "memberCode": "HO1G5P",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 9,
+        "tournament_id": 1,
+        "name": "Collins Benjamin",
+        "image": null,
+        "memberCode": "A2UN8F",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 10,
+        "tournament_id": 1,
+        "name": "Tom Cruise",
+        "image": null,
+        "memberCode": "CWJAKU",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 11,
+        "tournament_id": 1,
+        "name": "Morgan Johnny",
+        "image": null,
+        "memberCode": "N820L3",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 12,
+        "tournament_id": 1,
+        "name": "Daniel Brown",
+        "image": null,
+        "memberCode": "PH0T9Z",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 13,
+        "tournament_id": 1,
+        "name": "John doe",
+        "image": null,
+        "memberCode": "MOOBGK",
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 14,
+        "tournament_id": 1,
+        "name": "Loser of Match 2",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 15,
+        "tournament_id": 1,
+        "name": "Loser of Match 3",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 16,
+        "tournament_id": 1,
+        "name": "Loser of Match 4",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 17,
+        "tournament_id": 1,
+        "name": "Loser of Match 6",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 18,
+        "tournament_id": 1,
+        "name": "Loser of Match 8",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 19,
+        "tournament_id": 1,
+        "name": "Winner of Match 3",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 20,
+        "tournament_id": 1,
+        "name": "Winner of Match 4",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 21,
+        "tournament_id": 1,
+        "name": "Winner of Match 2",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 22,
+        "tournament_id": 1,
+        "name": "Winner of Match 8",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 23,
+        "tournament_id": 1,
+        "name": "Winner of Match 6",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 24,
+        "tournament_id": 1,
+        "name": "Winner of Match 9",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 25,
+        "tournament_id": 1,
+        "name": "Loser of Match 14",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 26,
+        "tournament_id": 1,
+        "name": "Winner of Match 10",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 27,
+        "tournament_id": 1,
+        "name": "Loser of Match 13",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 28,
+        "tournament_id": 1,
+        "name": "Winner of Match 11",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 29,
+        "tournament_id": 1,
+        "name": "Loser of Match 16",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 30,
+        "tournament_id": 1,
+        "name": "Winner of Match 12",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 31,
+        "tournament_id": 1,
+        "name": "Loser of Match 15",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 32,
+        "tournament_id": 1,
+        "name": "Winner of Match 13",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 33,
+        "tournament_id": 1,
+        "name": "Winner of Match 14",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 34,
+        "tournament_id": 1,
+        "name": "Winner of Match 15",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 35,
+        "tournament_id": 1,
+        "name": "Winner of Match 16",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 36,
+        "tournament_id": 1,
+        "name": "Winner of Match 17",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 37,
+        "tournament_id": 1,
+        "name": "Loser of Match 21",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 38,
+        "tournament_id": 1,
+        "name": "Winner of Match 18",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 39,
+        "tournament_id": 1,
+        "name": "Loser of Match 22",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 40,
+        "tournament_id": 1,
+        "name": "Winner of Match 19",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 41,
+        "tournament_id": 1,
+        "name": "Winner of Match 20",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 42,
+        "tournament_id": 1,
+        "name": "Winner of Match 21",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 43,
+        "tournament_id": 1,
+        "name": "Winner of Match 22",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 44,
+        "tournament_id": 1,
+        "name": "Winner of Match 23",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 45,
+        "tournament_id": 1,
+        "name": "Winner of Match 24",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 46,
+        "tournament_id": 1,
+        "name": "Winner of Match 25",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 47,
+        "tournament_id": 1,
+        "name": "Winner of Match 27",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 48,
+        "tournament_id": 1,
+        "name": "Winner of Match 28",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 49,
+        "tournament_id": 1,
+        "name": "Winner of Match 26",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 50,
+        "tournament_id": 1,
+        "name": "Winner of Match 31",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 51,
+        "tournament_id": 1,
+        "name": "Loser of Match 26",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 52,
+        "tournament_id": 1,
+        "name": "Winner of Match 29",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 53,
+        "tournament_id": 1,
+        "name": "Winner of Match 30",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      },
+      {
+        "id": 54,
+        "tournament_id": 1,
+        "name": "Loser of Match 30",
+        "image": null,
+        "memberCode": null,
+        "teamId": null,
+        "teamName": null
+      }
     ]
   },
 

@@ -34,6 +34,7 @@ type BracketsViewerMatch = {
   stage_id: number;
   group_id: number;
   round_id: number;
+  matchNumber?: number;
   /** 0=Locked 1=Waiting 2=Ready 3=Running 4=Completed 5=Archived */
   status: number;
   child_count: number;
@@ -790,7 +791,7 @@ function MatchPanel({ match, participants, isDark, onClose }: MatchPanelProps) {
         {[
           ["Group", `#${match.group_id}`],
           ["Stage", `#${match.stage_id}`],
-          ["Number", `${match.number}`],
+          ["Number", `${match.matchNumber ?? match.number}`],
           ["Child count", `${match.child_count}`],
         ].map(([label, val]) => (
           <div key={label}>
@@ -978,7 +979,7 @@ export default function Home() {
             numBadge.className = numClass;
             el.prepend(numBadge);
           }
-          numBadge.textContent = String(match.number);
+          numBadge.textContent = String(match.matchNumber ?? match.number);
 
           // Inject / update table tag on top-right corner
           const tableClass = "match-table-tag";
